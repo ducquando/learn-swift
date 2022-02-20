@@ -1,5 +1,5 @@
 # swift-history-and-hello-world
-Swift: The history and how to print "Hello, World!"
+Swift: the history and how to print "Hello, World!"
 
 ## 1. History
 
