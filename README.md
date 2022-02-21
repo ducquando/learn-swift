@@ -15,8 +15,8 @@ There are many sources for developers who are investigating Swift. For general i
 To run the code in this respository, you have to:
 1. Have a Mac (you cannot run Swift from a Window or Linux device)
 2. Have an Apple ID. If you have not created one, please visit [Apple ID](https://appleid.apple.com) and click on *Create Your Apple ID* on the top right of the screen. 
-3. Install [Xcode](https://developer.apple.com/xcode/) on your Mac (once again, Xcode is an Apple-developed compiler for Swift). You can choose either *Download from Website* or *Download from Mac App Store*. For beginner, I'd recommend you *Download from App Store* for convinience. If you choose *Download from Website*, you'll be able to choose the version (including both official and beta versions) you want to install.
-5. Run Xcode.
+3. Install [Xcode](https://developer.apple.com/xcode/) on your Mac (once again, Xcode is an Apple-developed compiler for Swift). You can choose either *Download from Website* or *Download from Mac App Store*. For beginner, I'd recommend you *Download from App Store* for convinience as it will install the newest version along with all necessary tools. But if you choose *Download from Website*, you'll be able to choose the version (including both official and beta versions) you want to install.
+5. Launch Xcode once it is installed successfully.
 
 Once you have done all of steps, you are ready to run your first program in Swift, which is printing "Hello, World!" as suggested by the tradition.
 
