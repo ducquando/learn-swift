@@ -14,7 +14,7 @@ There are many sources for developers who are investigating Swift. For general i
 
 To run the code in this respository, you have to:
 1. Have a Mac (you cannot run Swift from a Window or Linux device)
-2. Have an Apple ID. If you have not created one, please visit [Apple ID] (https://appleid.apple.com) and click on *Create Your Apple ID* on the top right of the screen. 
+2. Have an Apple ID. If you have not created one, please visit [Apple ID](https://appleid.apple.com) and click on *Create Your Apple ID* on the top right of the screen. 
 3. Install the newest version of Apple's free compiler called [Xcode](https://developer.apple.com/xcode/) on your Mac. You can choose either *Download from Website* or *Download from Mac App Store*.
 4. Run Xcode.
 
