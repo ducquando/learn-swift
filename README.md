@@ -1,10 +1,17 @@
 # learn-swift
 
+A tutorial on how to use Swift to create iOS's app
+
+### Table of content
+[1. History](#1-history)  
+[2. Getting Started](#2-getting-started)  
+[3. Hello, World!](#3-hello-world)
+
 ## 1. History
 
 Swift was *created on December 3, 2015, by Apple* on the idea of an easy, interacting but powerful programming language for anyone to learn, even if you do not have any prior experience with coding.
 
-Since Swift is particularly made by Apple for Apple developers, developers must *use Swift to make apps for Apple’s devices* such as iPhone, MacBook, and Apple Watch. Additionally, Xcode, a Swift's compiler, is made in a way that runs and previews the code’s result directly on an Apple device instead of a console or pop-up window like Python does.
+Since Swift is particularly made by Apple for Apple developers, developers must *use Swift to make app for Apple’s operating systems* such as iOS, iPadOS, and MacOS. Additionally, Xcode, a Swift's compiler, is made in a way that runs and previews the code’s result directly on an Apple device instead of a console or pop-up window like Python does.
 
 There are many resources for developers who are investigating Swift. For general information, you can go to the [Apple Developer site](https://developer.apple.com/swift/). For more details, you can visit [Swift's homepage](https://www.swift.org). For first-time programmers, Apple has an app called [Swift Playground](https://developer.apple.com/swift-playgrounds/), which offers fun and interacting lessons on coding and building apps using Swift. Like other programming languages, Swift also has a detailed [documentation](https://docs.swift.org/swift-book/) and a public source code hosted on [Apple’s GitHub](https://github.com/apple) in case one wants to dig down into.
 
