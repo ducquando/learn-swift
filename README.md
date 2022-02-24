@@ -3,11 +3,11 @@
 A tutorial on how to use Swift to create iOS's app
 
 ### Table of content
-[1. History](#1-history)  
+[1. General Information](#1-general-information)  
 [2. Getting Started](#2-getting-started)  
 [3. Hello, World!](#3-hello-world)
 
-## 1. History
+## 1. General Information
 
 Swift was *created on December 3, 2015, by Apple* on the idea of an easy, interacting but powerful programming language for anyone to learn, even if you do not have any prior experience with coding.
 
