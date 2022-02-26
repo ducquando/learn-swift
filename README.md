@@ -5,7 +5,11 @@ A tutorial on how to use Swift to create iOS application
 ### Table of content
 [1. General Information](#1-general-information)  
 [2. Getting Started](#2-getting-started)  
-[3. Hello, World!](#3-hello-world)
+[3. Basic Syntaxes in Swift](#3-basic-syntaxes-in-swift)  
+[3.1. Printing](#31-printing)  
+[3.2. Calculating](#32-calculating)  
+[3.3. Commenting](#33-commenting)  
+[4. Variables](#4-variables)  
 
 ## 1. General Information
 
@@ -19,17 +23,25 @@ There are many resources for developers who are investigating Swift. To find gen
 ## 2. Getting Started
 
 Let's get the ball rolling, aren't we?
-To run Swift, you have to:
-1. Have a Mac (Swift cannot be run from a Window or Linux device)
-2. Have an Apple ID. If you have not created one, please visit [Apple ID](https://appleid.apple.com) and click on *Create Your Apple ID* on the top right of the screen to create an Apple ID. 
-3. Install [Xcode](https://developer.apple.com/xcode/)^1^ on your Mac (once again, Xcode is an Apple-developed compiler for Swift). On the site, you will find that there are 2 downloading options: *Download from Website* and *Download from Mac App Store*. For beginner, I'd recommend you choosing the latter (*Download from Website*) for convinience as it will install the newest version along with all necessary tools. But if you want to choose the version (including both official and beta versions) of Xcode and manually install the additional tool, choose *Download from Website*. To be clear, the version I use for this tutorial is 13.2.1.
-4. Launch Xcode once it is installed successfully.
+To code in Swift, you have to:
+  1. Have a Mac (Swift cannot be run from a Window or Linux device)
+  2. Have an Apple ID. If you have not created one, please visit [Apple ID](https://appleid.apple.com) and click on *Create Your Apple ID* on the top right of the screen to create an Apple ID. 
+  3. Install [Xcode](https://developer.apple.com/xcode/) on your Mac (once again, Xcode is an Apple-developed compiler for Swift). On the site, you will find that there are 2 downloading options: *Download from Website* and *Download from Mac App Store*. For beginner, I'd recommend you choosing the latter (*Download from Website*) for convinience as it will install the newest version along with all necessary tools. But if you want to choose the version (including both official and beta versions) of Xcode and manually install the additional tool, choose *Download from Website*. To be clear, the version I use for this tutorial is 13.2.1.<sup>1</sup>
+  4. Launch Xcode once it is installed successfully.
 
-Once you have done all of steps, you are ready to run your first program in Swift, which is printing "Hello, World!" as suggested by the tradition.
+Once you have done all of steps, you are ready to code in Swift, which is printing "Hello, World!" to the console as suggested by the tradition.
 
-^1^ For more instruction on installing and running Xcode, please visit [Apple Developer: Swift Overview](https://developer.apple.com/documentation/xcode) as I will refer to lots of provided instruction from Apple Developer throughout the instruction.
+<sup>1</sup> For more instruction on installing and running Xcode, please visit [Apple Developer: Swift Overview](https://developer.apple.com/documentation/xcode).
 
-## 3. Hello, World!
+## 3. Basic Syntaxes in Swift
+### 3.1. Printing 
+### 3.2. Calculating
+### 3.3. Commenting
+
+
+## 4. Variables
+
+
 
 
 
