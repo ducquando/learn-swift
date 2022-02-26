@@ -8,7 +8,7 @@ A tutorial on how to use Swift to create iOS application
 [3. The Basics](#3-the-basics)  
   [3.1. Hello, world!](#31-hello-world)  
   [3.2. Comment](#32-comment)  
-  [3.3. Variables](#33-variables)  
+  [3.3. Constant and Variables](#33-constant-and-variables)  
     [3.3.1. Declaring Syntax](#331-declaring-syntax)  
     [3.3.2. Naming Convention](#332-naming-convention)  
     [3.3.3. Types](#333-types)  
@@ -40,60 +40,82 @@ Once you have done all of steps, you are ready to code in Swift, which is printi
 <sup>1</sup> For more instruction on installing and running Xcode, please visit [Apple Developer: Xcode](https://developer.apple.com/documentation/xcode).
 
 ## 3. The Basics
+At the end of this section, you will understand some basic concepts in Swift such as printing, commenting, and declaring variables. You are also provided a file written in Swift to play around with once finish reading.
+
 ### 3.1. Hello, world!
+
+Printing in Swift is easy as it can be done with just one line of code, which is `print()`. You don't have to include the semi-colon `;` at the end of each line of code, but you can do that if your want to.
+
+The syntax below will print the phrase "Hello, world!" to the console on separte lines.
 
 ```swift
 print("Hello, world!")
+print("Hello, world!");
+```
+
+You can also print other things, like a number or a result of a mathematic calculation, out to the console. The example below will print 2 and 12, respectively, to the console.
+```swift
+print(2)
+print(10+2)
 ```
 
 ### 3.2. Comment
 
+Code is read by other people more frequently than you think. Therefore, we use comments so that other programmers can understand what we write. Since a comment is only visible to humans and gets ignored by computers, you don't have to worry that comment will destroy your code. In fact, you're encouraged to write comments.
+
+There are 2 types of comments in Swift: single-line and multi-line. Single-line comments are often used to explain the logic of a code, and multi-line comments are used to explain a whole set of code.
+
+For single-line comments, use `//` to comment out all the texts that appeared behind it on that line. For example:
 ```swift
 // This is a comment
-```
-You can also comment at the end of each line
-```swift
 print("some texts") // This is another comment
 ```
-
+For multi-line comments, you have to indicate the beginning (marked with `/*`) and the ending (marked with `*/`) of the comment. For example:
 ```swift
 /* This is another comment,
 but it spreads over many lines
 */
 ```
 
-### 3.3. Variables
+### 3.3. Constant and variables
+Swift uses variables and constants to store and refer to values by an identifying name. While the value of a constant can’t be changed once it’s set, a variable can be set to a different value in the future.
+
 #### 3.3.1. Declaring Syntax
-
+Constants and variables must be declared before they’re used. You declare constants with the `let` keyword and variables with the `var` keyword. 
 ```swift
-var firstVariable = "User"
-let secondVariable = "10"
+var name = "User"
+let age = 10
 ```
-
-You cannot declare a variable without the initialized value
+As said, you cannot declare a variable without the initialized value.
 ```swift
-var firstVariable // error: unexpected pattern
+var name // error: unexpected pattern
 ```
-
+You can change the value of a variable after declaration. However, the new value's type must match that of the old one.
 ```swift
-var firstVariable = "User"
-firstVariable = "Do Duc Quan" // re-assign firstVariable with "Do Duc Quan"
-print(firstVariable) // "Do Duc Quan"
+var name = "User"
+name = "Do Duc Quan" // re-assign firstVariable with "Do Duc Quan"
+print(name) // "Do Duc Quan"
 ```
-
+As said, you cannot change the value of a constant. 
 ```swift
-let secondVariable = 10
-secondVariable = 20 // error: cannot assign to value: 'secondVariable' is a 'let' constant
+let age = 10
+age = 20 // error: cannot assign to value: 'secondVariable' is a 'let' constant
 ```
 
 #### 3.3.2. Naming Convention
-`firstVariable`
 
-`1stvariable` // error: expected pattern
+For Swift, constant and variable names can contain almost any character except whitespace, mathematical symbols, arrows, private-use Unicode scalar values, or line-and box-drawing characters. However, as noted in Swift 3.0 documentation, the Unicode variable should be named in camelCase like `firstVariable`.
 
+One more thing to note, although numbers may be included elsewhere within the name, a variable/constant cannot begin with a number. For example, `the1stVarible` is legal but `1stvariable` is illegal.
 
 
 #### 3.3.3. Types
+
+Swift provides its version of all fundamental C (and Objective-C) variables/constant types such as Int, Double, Float, Bool, and String. The syntax for declaring type is: `var variableName : type`. However, it is optional to declare type since Swift will do it automatically in the background.
+
+For more information, please visit [Swift Documentation: The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html).
+
+Now you may have understood all the basics in Swift. It's time to download [the_basics.playground], run with Xcode and play around.
 
 <!---## 4. Basic Operators
 ### 4.1. Calculation
