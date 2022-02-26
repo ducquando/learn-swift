@@ -12,9 +12,9 @@ A tutorial on how to use Swift to create iOS application
     [3.3.1. Declaring Syntax](#331-declaring-syntax)  
     [3.3.2. Naming Convention](#332-naming-convention)  
     [3.3.3. Types](#333-types)  
-[4. Basic Operators](#4-basic-operators)  
+<!---[4. Basic Operators](#4-basic-operators)  
   [4.1. Calculation](#41-calculation)  
-  [4.2 Comparison](#42-comparison)  
+  [4.2 Comparison](#42-comparison) --->
   
   
 ## 1. General Information
@@ -23,7 +23,7 @@ Swift was *created on December 3, 2015, by Apple* on the idea of an easy, intera
 
 Since Apple creates Swift, they require that developers *use Swift to make app for their operating systems* such as iOS, iPadOS, and MacOS. Apple also creates a paired compiler to run Swift code, which is named Xcode. You will find Xcode hard-to-use at first, but it will become mush easier and more powerful when continue being used. Additionally, SwiftUI, an UI development tool intergrated in Xcode, is made in a way that runs and previews the code’s result directly on an Apple device instead of a console or pop-up window like Python does.
 
-There are many resources for developers who are investigating Swift. To find general information, you can go to [Apple Developer: Swift Overview](https://developer.apple.com/swift/); or you can visit [Swift's homepage](https://www.swift.org) for more detailed information. If you are first-time programmer, Apple has an app called [Swift Playground](https://developer.apple.com/swift-playgrounds/), which offers fun and interacting lessons on coding and building apps using Swift. Like other programming languages, Swift also has a detailed [documentation](https://docs.swift.org/swift-book/) and a public source code hosted on [Apple’s GitHub](https://github.com/apple) in case one wants to dig down into.
+There are many resources for developers who are investigating Swift. To find general information, you can go to [Apple Developer: Swift](https://developer.apple.com/swift/); or you can visit [Swift's homepage](https://www.swift.org) for more detailed information. If you are first-time programmer, Apple has an app called [Swift Playground](https://developer.apple.com/swift-playgrounds/), which offers fun and interacting lessons on coding and building apps using Swift. Like other programming languages, Swift also has a detailed [documentation](https://docs.swift.org/swift-book/) and a public source code hosted on [Apple’s GitHub](https://github.com/apple) in case one wants to dig down into.
 
 
 ## 2. Getting Started
@@ -37,7 +37,7 @@ To code in Swift, you have to:
 
 Once you have done all of steps, you are ready to code in Swift, which is printing "Hello, World!" to the console as suggested by the tradition.
 
-<sup>1</sup> For more instruction on installing and running Xcode, please visit [Apple Developer: Swift Overview](https://developer.apple.com/documentation/xcode).
+<sup>1</sup> For more instruction on installing and running Xcode, please visit [Apple Developer: Xcode](https://developer.apple.com/documentation/xcode).
 
 ## 3. The Basics
 ### 3.1. Hello, world!
@@ -95,9 +95,9 @@ secondVariable = 20 // error: cannot assign to value: 'secondVariable' is a 'let
 
 #### 3.3.3. Types
 
-## 4. Basic Operators
+<!---## 4. Basic Operators
 ### 4.1. Calculation
-### 4.2 Comparison
+### 4.2 Comparison --->
 
 
 
