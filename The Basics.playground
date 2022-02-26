@@ -1,0 +1,14 @@
+/**
+ * Basic syntaxes in Swift
+ * Created by Do Duc Quan on 26/02/2022.
+ */
+
+/* Printing "Hello, World!" to the console */
+print("Hello, world!") // print "Hello, world!"
+
+var greeting = "Hello, world!" // create a new variable holding the phrase "Hello, World!"
+print(greeting) // this also print "Hello, World!"
+
+var userName : String = "Name";
+userName = "Do Duc Quan";
+print(userName); // "Do Duc Quan"
