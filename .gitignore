@@ -1,0 +1,9 @@
+## User settings
+xcuserdata/
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Avoid checking in source code from the Xcode workspace
+*.xcworkspace
