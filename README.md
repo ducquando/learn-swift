@@ -1,6 +1,6 @@
 # learn-swift
 
-A tutorial project on using Swift to create iOS apps from CS308 at Fulbright University Vietnam
+A tutorial project on using Swift to create iOS apps from CS308 Programming Languages at Fulbright University Vietnam
 
 ### Table of content
 [1. General Information](#1-general-information)  
