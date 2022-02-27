@@ -33,14 +33,14 @@ To code in Swift, you have to:
   1. Have a Mac (Swift cannot be run from a Window or Linux device)
   2. Have an Apple ID. If you have not created one, please visit [Apple ID](https://appleid.apple.com) and click on *Create Your Apple ID* on the top right of the screen to create an Apple ID. 
   3. Install [Xcode](https://developer.apple.com/xcode/) on your Mac (once again, Xcode is an Apple-developed compiler for Swift). On the site, you will find that there are 2 downloading options: *Download from Website* and *Download from Mac App Store*. For beginner, I'd recommend you choosing the latter (*Download from Website*) for convinience as it will install the newest version along with all necessary tools. But if you want to choose the version (including both official and beta versions) of Xcode and manually install the additional tool, choose *Download from Website*. To be clear, the version I use for this tutorial is 13.2.1.<sup>1</sup>
-  4. Launch Xcode once it is installed successfully.
+  4. [optional] Download this repository if you want some demo codes and exercises.
 
 Once you have done all of steps, you are ready to code in Swift, which is printing "Hello, World!" to the console as suggested by the tradition.
 
 <sup>1</sup> For more instruction on installing and running Xcode, please visit [Apple Developer: Xcode](https://developer.apple.com/documentation/xcode).
 
 ## 3. The Basics
-At the end of this section, you will understand some basic concepts in Swift such as printing, commenting, and declaring variables. You are also provided a file written in Swift to play around with once finish reading.
+At the end of this section, you will understand some basic concepts in Swift such as printing, commenting, and declaring variables. You are also provided a file written in Swift to fiddle with once finish reading.
 
 ### 3.1. Hello, world!
 
@@ -111,11 +111,10 @@ One more thing to note, although numbers may be included elsewhere within the na
 
 #### 3.3.3. Types
 
-Swift provides its version of all fundamental C (and Objective-C) variables/constant types such as Int, Double, Float, Bool, and String. The syntax for declaring type is: `var variableName : type`. However, it is optional to declare type since Swift will do it automatically in the background.
+Swift provides its version of all fundamental C (and Objective-C) variables/constant types such as Int, Double, Float, Bool, and String. The syntax for declaring type is: `var variableName : type`. However, it is optional to declare type since Swift will do it automatically in the background. If you want to know more about different types of Swift variables/constants, please visit [Swift Documentation: The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html).
 
-For more information, please visit [Swift Documentation: The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html).
+Now you may have understood all the basics in Swift. It's time to download [Swift Exercises.playground](/Swift%20Exercises.playground), run it with Xcode and play around with the first exercise called *The Basics*.
 
-Now you may have understood all the basics in Swift. It's time to download [the_basics.playground], run with Xcode and play around.
 
 <!---## 4. Basic Operators
 ### 4.1. Calculation
