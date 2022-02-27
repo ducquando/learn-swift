@@ -93,13 +93,13 @@ var name // error: unexpected pattern
 You can change the value of a variable after declaration. However, the new value's type must match that of the old one.
 ```swift
 var name = "User"
-name = "Do Duc Quan" // re-assign firstVariable with "Do Duc Quan"
+name = "Do Duc Quan" // re-assign name with "Do Duc Quan"
 print(name) // "Do Duc Quan"
 ```
 As said, you cannot change the value of a constant. 
 ```swift
 let age = 10
-age = 20 // error: cannot assign to value: 'secondVariable' is a 'let' constant
+age = 20 // error: cannot assign to value: 'age' is a 'let' constant
 ```
 
 #### 3.3.2. Naming Convention
