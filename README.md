@@ -113,7 +113,7 @@ One more thing to note, although numbers may be included elsewhere within the na
 
 Swift provides its version of all fundamental C (and Objective-C) variables/constant types such as Int, Double, Float, Bool, and String. The syntax for declaring type is: `var variableName : type`. However, it is optional to declare type since Swift will do it automatically in the background. If you want to know more about different types of Swift variables/constants, please visit [Swift Documentation: The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html).
 
-Now you may have understood all the basics in Swift. It's time to download [Swift Exercises.playground](/Swift%20Exercises.playground), run it with Xcode and play around with the first exercise called *The Basics*.
+Now you may have understood all the basics in Swift. It's time to download [Swift Exercises.playground](/SwiftExercises.playground), run it with Xcode and play around with the first exercise called *The Basics*.
 
 
 <!---## 4. Basic Operators
