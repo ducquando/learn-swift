@@ -1,6 +1,6 @@
 # learn-swift
 
-A tutorial on how to use Swift to create iOS application
+A tutorial project on using Swift to create iOS apps from CS308 at Fulbright University Vietnam
 
 ### Table of content
 [1. General Information](#1-general-information)  
