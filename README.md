@@ -1,17 +1,18 @@
 # learn-swift
 
-A tutorial project on using Swift to create iOS apps from CS308 at Fulbright University Vietnam
+A tutorial project on using Swift to create iOS apps from CS308 Programming Languages at Fulbright University Vietnam
 
 ### Table of content
-[1. General Information](#1-general-information)  
-[2. Getting Started](#2-getting-started)    
-[3. The Basics](#3-the-basics)  
-  [3.1. Hello, world!](#31-hello-world)  
-  [3.2. Comment](#32-comment)  
-  [3.3. Constant and Variables](#33-constant-and-variables)  
-    [3.3.1. Declaring Syntax](#331-declaring-syntax)  
-    [3.3.2. Naming Convention](#332-naming-convention)  
-    [3.3.3. Types](#333-types)  
+
+- [1. General Information](#1-general-information)  
+- [2. Getting Started](#2-getting-started)    
+- [3. The Basics](#3-the-basics)  
+  - [3.1. Hello, world!](#31-hello-world)  
+  - [3.2. Comment](#32-comment)  
+  - [3.3. Constant and Variables](#33-constant-and-variables)  
+    - [3.3.1. Declaring Syntax](#331-declaring-syntax)  
+    - [3.3.2. Naming Convention](#332-naming-convention)  
+    - [3.3.3. Types](#333-types)  
 <!---[4. Basic Operators](#4-basic-operators)  
   [4.1. Calculation](#41-calculation)  
   [4.2 Comparison](#42-comparison) --->
@@ -19,11 +20,17 @@ A tutorial project on using Swift to create iOS apps from CS308 at Fulbright Uni
   
 ## 1. General Information
 
-Swift was *created on December 3, 2015, by Apple* on the idea of an easy, interacting but powerful programming language for anyone to learn, even if you do not have any prior experience with coding.
+Swift was *created on December 3, 2015, by Apple* on an attempt to replace the old-dying Objective-C for its application development purpose.
 
-Since Apple creates Swift, they require that developers *use Swift to make app for their operating systems* such as iOS, iPadOS, and MacOS. Apple also creates a paired compiler to run Swift code, which is named Xcode. You will find Xcode hard-to-use at first, but it will become mush easier and more powerful when continue being used. Additionally, SwiftUI, an UI development tool intergrated in Xcode, is made in a way that runs and previews the code’s result directly on an Apple device instead of a console or pop-up window like Python does.
+So, why learn Swift? If you are looking for an easy, interacting but powerful programming language, Swift is the right choice for you. Apple even advertises that anyone, even children having no experience with coding, can learn it. However, if you want to become an Apple developer, learning Swift is a must.
 
-There are many resources for developers who are investigating Swift. To find general information, you can go to [Apple Developer: Swift](https://developer.apple.com/swift/); or you can visit [Swift's homepage](https://www.swift.org) for more detailed information. If you are first-time programmer, Apple has an app called [Swift Playground](https://developer.apple.com/swift-playgrounds/), which offers fun and interacting lessons on coding and building apps using Swift. Like other programming languages, Swift also has a detailed [documentation](https://docs.swift.org/swift-book/) and a public source code hosted on [Apple’s GitHub](https://github.com/apple) in case one wants to dig down into.
+Apple also creates a paired compiler to run Swift code, which is named Xcode. You will find Xcode hard-to-use at first, but it will become mush easier and more powerful when continue being used. Additionally, SwiftUI, an UI development tool intergrated in Xcode, is made in a way that runs and previews the code’s result directly on an Apple device instead of a console or pop-up window like Python does.
+
+There are many resources for developers who are investigating Swift such as:
+- [Apple Developer: Swift](https://developer.apple.com/swift/) & [Swift's homepage](https://www.swift.org) for general information
+- [Swift Playground](https://developer.apple.com/swift-playgrounds/) for interacting lessons on coding and building apps using Swift
+- [Swift Documentation](https://docs.swift.org/swift-book/) for language guide
+- [Apple’s GitHub](https://github.com/apple) for public source code
 
 
 ## 2. Getting Started
@@ -113,7 +120,7 @@ One more thing to note, although numbers may be included elsewhere within the na
 
 Swift provides its version of all fundamental C (and Objective-C) variables/constant types such as Int, Double, Float, Bool, and String. The syntax for declaring type is: `var variableName : type`. However, it is optional to declare type since Swift will do it automatically in the background. If you want to know more about different types of Swift variables/constants, please visit [Swift Documentation: The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html).
 
-Now you may have understood all the basics in Swift. It's time to download [Swift Exercises.playground](/Swift%20Exercises.playground), run it with Xcode and play around with the first exercise called *The Basics*.
+Now you may have understood all the basics in Swift. It's time to download [Swift Exercises.playground](/SwiftExercises.playground), run it with Xcode and play around with the first exercise called *The Basics*.
 
 
 <!---## 4. Basic Operators
