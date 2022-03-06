@@ -15,11 +15,11 @@ A tutorial project on using Swift from CS308 Programming Languages at Fulbright 
 - [5. Constants and Variables](#5-constants-and-variables)  
   - [5.1. Naming Convention](#51-naming-convention)  
   - [5.2. Declaring Syntax](#52-declaring-syntax)  
-- [6. Basic Operators](#4-basic-operators)  
-  - [6.1. Assignment](#61-assignment-operators)  
-  - [6.2. Arithmetic](#62-arithmetic-operators)  
-  - [6.3. Compound Assignment Operators](#63-compound-assignment-operators)  
-  - [6.4. Comparison](#64-comparison-operators)  
+- [6. Basic Operators](#6-basic-operators)    
+  - [6.1. Assignment](#61-assignment)  
+  - [6.2. Arithmetic](#62-arithmetic)  
+  - [6.3. Compound Assignment](#63-compound-assignment)  
+  - [6.4. Comparison](#64-comparison)  
   
   
 ## 1. General Information
@@ -100,7 +100,7 @@ String and Integer are only two of many data types provided by Swift. As stated 
 
 If you are ready, let's dig down on each data types. Please noted, in Swift, data types are always written in Pascal case (e.g. Int).
 
-*Acknowledgment: The credit for this part goes to Apple from [their Swift's documentation](https://docs.swift.org/swift-book/LanguageGuide).
+*Acknowledgment: The credit for this part goes to Apple from [their Swift's documentation](https://docs.swift.org/swift-book/LanguageGuide).*
 
 #### a. Integers
 
@@ -219,14 +219,14 @@ var name : String?     // Set name to either have a value or not at all
 var age : Int? = nil   // This is equivalent to the first line
 ```
 
-Last but not least, manual type annotation can reduces wrong data type re-assignment and make your debug easier. This is very useful for number-like variables calculating operators, which you will learn in the following section regarding [arithmetic operators](#62-arithmetic-operators) 
+Last but not least, manual type annotation can reduces wrong data type re-assignment and make your debug easier. This is very useful for number-like variables calculating operators, which you will learn in the following section regarding [arithmetic operators](#62-arithmetic) 
 
 
 ## 6. Basic Operators
 
 An operator is a special symbol or phrase that you use to check, change, or combine values. In Swift, a operator is either unary (single target), binary (two targets), or ternary (three targets).
 
-### 6.1. Assignment Operators
+### 6.1. Assignment
 
 The *assignment operator* `=` assigns the value of the left side with the value of the right side. You can use assignment operator to initialize variable/constant.
 
@@ -277,7 +277,7 @@ age = 20   // error: cannot assign value because 'age' is a constant
 
 And unlike that of its predecessor Objective-C, Swift's assignment operator does not return a value.
 
-### 6.2. Arithmetic Operators
+### 6.2. Arithmetic
 
 Swift supports the standard arithmetic operators for all number types: addition `+`, subtraction `-`, multiplication `*`, division `/`, and remainder`%`.
 
@@ -304,7 +304,7 @@ greeting = greeting + "world"
 print(greeting)   // "hello, world"
 ```
 
-### 6.3. Compound Assignment Operators
+### 6.3. Compound Assignment
 
 Compound assignment operators is an operator that combine assignment `=` with another operation. One example is the addition assignment operator `+=`.
 
@@ -318,7 +318,7 @@ In the example above, the expression `greeting += "world"` is shorthand for `gre
 
 And similar to assignment operator, compound assignment operator don’t return a value. 
 
-### 6.4. Comparison Operators
+### 6.4. Comparison
 
 Swift supports many comparison operators, including:
 
