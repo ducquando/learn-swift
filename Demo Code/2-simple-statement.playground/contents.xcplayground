@@ -5,5 +5,7 @@
         <page name='Data Types and Data Binding'/>
         <page name='Constants and Variables'/>
         <page name='Basic Operators'/>
+        <page name='Selection Control Structures'/>
+        <page name='testing'/>
     </pages>
 </playground>

@@ -3,7 +3,7 @@
  * Created by Do Duc Quan on 06/03/2022.
  */
 
-/* Assignment operator */
+// ASSIGNMENT OPERATOR
 var age : Double = 20
 age = 0
 print(age)  // 0.0
@@ -11,12 +11,13 @@ print(age)  // 0.0
 var (a, b) = (1, 2)
 print(a)    // 1
 
+var char = true
 var user = "User"
-var year = Int(user) ?? 0  // year now holds 0 since cannot convert String "User" into Int.
-print(year)                // 0
+var year : Int = Int(user) ?? 10  // year now holds 10 since cannot convert String "User" into Int.
+print(year)                // 10
 
 
-/* Arithmetic operator */
+// ARITHMETIC OPERATOR
 var money : Double = 2000
 money = money + 20.00  // We know that money is a Double, so we must add another Double to it
 money += 20.00         // Another way of adding value to itself
@@ -26,14 +27,14 @@ print(4 / 3)   // 1
 print(4.0 / 3.0) // 1.333333
 
 
-/* String concatenation */
+// STRING CONCATENATION
 var firstName = "Quan"
 var middleName = "Duc"
 var lastName = "Do"
 print(lastName + " " + middleName + " " + firstName)   // "Do Duc Quan"
 
 
-/* Comparison operator */
+// COMPARISON OPERATOR
 /* you can compare boolean types with one another */
 print(true == false)  // False since true does not equal to false
 print(true != false)  // True
