@@ -27,7 +27,6 @@ String and Integer are only two of many data types provided by Swift. As stated 
 
 If you are ready, let's dig down on each data types. Please noted, in Swift, data types are always written in Pascal case (e.g. Int).
 
-*Acknowledgment: The credit for this part goes to Apple from [their Swift's documentation](https://docs.swift.org/swift-book/LanguageGuide).*
 
 #### a. Integers
 
@@ -147,7 +146,7 @@ Finally, as said, you cannot declare a variable without the initialized value. F
 var name   // error: unexpected pattern
 ```
 
-However, in some cases you might want not to store any value in a variable and you can achieve that using explicit annotation, which is introduced in the right below section about [type annotation](#b-type-annotation)
+However, in some cases you might want not to store any value in a variable and you can achieve that using explicit annotation, which is introduced in the right below section about [type annotation](#b-type-annotation).
 
 #### b. Type Annotation
 
@@ -171,7 +170,7 @@ var name : String?     // Set name to either have a value or not at all
 var age : Int? = nil   // This is equivalent to the first line
 ```
 
-Last but not least, manual type annotation can reduces wrong data type re-assignment and make your debug easier. This is very useful for number-like variables calculating operators, which you will learn in the following section regarding [arithmetic operators](#32-arithmetic) 
+Last but not least, manual type annotation can reduces wrong data type re-assignment and make your debug easier. This is very useful for number-like variables calculating operators, which you will learn in the following section regarding [arithmetic operators](#32-arithmetic). 
 
 
 ## 3. Basic Operators

@@ -68,7 +68,7 @@ if age > 18 && age < 23 {
 // Young Adult
 ```
 
-Like logical statement, Swift also uses [short circuit](../../Language%20Guide/2-simple-statements/#35-logical) on `if-elseif-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
+Like logical statement, Swift also uses [short circuit](../../../Language%20Guide/2-simple-statements/#35-logical) on `if-else if-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
 
 ### 1.2. Switch
 
@@ -275,6 +275,14 @@ while let name = nameIterator.next {
 Control transfer statements change the order in which your code is executed, by transferring control from one piece of code to another. Swift has five control transfer statements: `continue`, `break`, `fallthrough`, `return`, and `throw`.
 
 ### 3.1. Continue
+
+The `continue` statement tells a loop to stop what it’s doing and start again at the beginning of the next iteration through the loop. 
+
+The `break` statement ends execution of an entire control flow statement immediately. Break can be used inside a `switch` or `loop` statement when you want to terminate the execution early.
+
+Continue and break provide vulnerabilities on code block since the rest of code will not be executed. It is even more dangerous than a short circuit.
+
+
 
 ### 3.2. Break
 
