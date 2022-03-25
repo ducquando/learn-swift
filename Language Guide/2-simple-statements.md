@@ -356,7 +356,7 @@ Swift includes several range operators, which are shortcuts for expressing a ran
 </thead>
 <tbody>
   <tr>
-    <td colspan="2">defines a range that runs from first value to last value; the first value must not be greater than the last value</td>
+    <td colspan="2">Defines a range that runs from first value to last value. The first value must not be greater than the last value</td>
   </tr>
   <tr>
     <td>...</td>
@@ -373,7 +373,7 @@ Swift includes several range operators, which are shortcuts for expressing a ran
 
 | Two-Sided | One-Sided |
 | --- | --- |
-| `a  b` | `a` `b` |
+| `a..b` | `a..` `..b` |
 | limited in two directions | limited in one direction and continue as far as possible in the other |
 
 #### c. Full version

@@ -68,7 +68,7 @@ if age > 18 && age < 23 {
 // Young Adult
 ```
 
-Like logical statement, Swift also uses [short circuit](../Language%Guide/2-simple-statements/#35-logical) on `if-elseif-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
+Like logical statement, Swift also uses [short circuit](../../Language%20Guide/2-simple-statements/#35-logical) on `if-elseif-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
 
 ### 1.2. Switch
 
