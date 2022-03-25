@@ -117,6 +117,7 @@ If you want to declare multiple constants/variables at the same time, you can do
 
 ```swift
 // Example of a multi-variable declaration of different types
+
 var name = "User", age = 20
 ```
 
@@ -124,6 +125,7 @@ Since most types in Swift are value type, we actually make a copy of the assigni
 
 ```swift
 // Example of variable assignment's nature
+
 var name = "User"    
 var user = name
 name = "Do Duc Quan"
@@ -155,6 +157,7 @@ For now, let's focus on type annotation only. As you see in many examples above,
 
 ```swift
 // Example of a explicit type annotation and type conversion 
+
 var welcomeMessage: String = "Welcome"
 var age = Int("20") // 20
 ```
@@ -162,7 +165,8 @@ var age = Int("20") // 20
 Moreover, you can set a variable to have `nil` value by explicitly annotating Optionals type (putting the question mark `?` after the associated data type). You can also assign the value `nil` (meaning no value) to the variable, yet this step is optional. This is called [Optional Binding Declaration](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID333).
 
 ```swift
-/* Example of optional binding declaration */
+// Example of optional binding declaration
+
 var name : String?     // Set name to either have a value or not at all
 var age : Int? = nil   // This is equivalent to the first line
 ```
@@ -180,6 +184,7 @@ The *assignment operator* `=` assigns the value of the left side with the value 
 
 ```swift
 // Example of a variable assignment
+
 var name = "Do Duc Quan"
 var user = name    // initialize user with name, whose value is "Do Duc Quan"
 ```
@@ -187,6 +192,7 @@ var user = name    // initialize user with name, whose value is "Do Duc Quan"
 For Tuple, you must have equal number of values on both sides. For example:
 ```swift
 // Example of a Tuple constant assignment
+
 let (x, y) = (1, 2)
 print(x)   // 1
 print(y)   // 2
@@ -210,6 +216,7 @@ If you want to reassign a related data type value to a variable, you must use ex
 
 ```swift
 // Example of correct and incorrect explicitly converted reassignment
+
 var user = "User"
 user = String(20)    // name now holds the string "20"
 var age : Int? = 20
@@ -233,6 +240,7 @@ However, the result of the calculation differs from each data types. This is bec
 
 ```swift
 // Example of correct and incorrect arithmetic operators
+
 var ageInt = 20
 var decadeInt = 12
 var ageDouble : Double = 20
@@ -247,6 +255,7 @@ The addition operator is also supported for String concatenation:
 
 ```swift
 // Example of a String concatenation using addition operator
+
 var greeting = "hello, "
 greeting = greeting + "world"
 print(greeting)   // "hello, world"
@@ -258,6 +267,7 @@ Compound assignment operators is an operator that combine assignment `=` with an
 
 ```swift
 // Example of a String concatenation using compound addition operator
+
 var greeting = "hello, "
 greeting += "world"
 print(greeting)  // "hello, world"
@@ -284,6 +294,7 @@ Each of the above comparison operators returns a Bool value to indicate whether 
 
 ```swift
 // Examples of comparison operators
+
 1 == 1   // true 
 2 != 1   // true 
 2 > 1    // true
@@ -294,6 +305,7 @@ You can also compare two tuples if they have the same type and the same number o
 
 ```swift
 // Examples of comparison operators on Tuple variables
+
 (1, "zebra") < (2, "apple")   // true because 1 is less than 2; "zebra" and "apple" aren't compared
 (3, "apple") < (3, "bird")    // true because 3 is equal to 3, and "apple" is less than "bird"
 (4, "dog") == (4, "dog")      // true because 4 is equal to 4, and "dog" is equal to "dog"
@@ -324,6 +336,7 @@ On top of that, logical operators use short-circuit evaluation to consider its e
 
 ```swfit
 // Example of a dirty code catched in compile time
+
 print(true || ("dar" = 9))   // error: cannot compare String with Int
 ```
 
@@ -334,11 +347,27 @@ Swift includes several range operators, which are shortcuts for expressing a ran
 
 #### a. Closed and Half-Opened
 
-| Closed range | Half-opened range |
-| --- | --- |
-| `...` | `..<` |
-| defines a range that runs from first value to last value; the first value must not be greater than the last value |
-| includes both first and last value | include first value but exclude last value |
+<table>
+<thead>
+  <tr>
+    <th>Closed</th>
+    <th>Half-Opened</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="2">defines a range that runs from first value to last value; the first value must not be greater than the last value</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>..&lt;</td>
+  </tr>
+  <tr>
+    <td>includes both first and last value</td>
+    <td>include first value but exclude last value </td>
+  </tr>
+</tbody>
+</table>
 
 #### b. Two-Sided and One-Sided
 

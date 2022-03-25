@@ -32,11 +32,11 @@ Once you have done all steps, you are ready to begin.
 
 ## Language Guide
 
-1. [Hello, world!](../tutorial/1-hello-world.md)  
-2. [Simple Statements](../tutorial/1-simple-statements.md)  
-3. [Control Flow Statements](../tutorial/1-control-flow-statements.md)
+1. [Hello, world!](../Language%Guide/1-hello-world.md)  
+2. [Simple Statements](../Language%Guide/1-simple-statements.md)  
+3. [Control Flow Statements](../Language%Guide/1-control-flow-statements.md)  
 
 ## References
-Inc., A. (2022). About the Language Reference. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html 
-Inc., A. (2022). Language Guide. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/LanguageGuide 
+Inc., A. (2022). About the Language Reference. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html  
+Inc., A. (2022). Language Guide. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/LanguageGuide  
 Veen, T. in't. (2019). Swift in depth. Manning.   
