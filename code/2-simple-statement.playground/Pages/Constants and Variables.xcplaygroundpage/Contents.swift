@@ -9,11 +9,11 @@ print(greeting)                  // "Hello, World!"
 print()                          // Print a blank line
 
 // VARIABLE ASSIGNMENT
-var greeting2 = greeting
-print(greeting2)                 // "Hello, World!"
+var anotherGreeting = greeting
+print(anotherGreeting)                 // "Hello, World!"
 greeting = "Do Duc Quan"
 print(greeting)                  // "Do Duc Quan"
-print(greeting2)                 // "Hello, World!" - the value does not change since assign one variable's value to another variable means copying the value
+print(anotherGreeting)                 // "Hello, World!" - the value does not change since assign one variable's value to another variable means copying the value
 print()
 
 

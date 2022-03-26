@@ -331,7 +331,9 @@ print((true || true) && !true)    // false
 print(true || (true && false))  // true
 ```
 
-On top of that, logical operators use short-circuit evaluation to consider its expressions. Specifically, if the first expression already fixes the overall result (e.g. `true || ...`, `false && ...`), there is no need to execute other expressions. Short-circuit is used to optimize run time, yet it may cause confusing if other expression is a function and it supposes to run. However, that does not mean that you can write dirty code. Swift will catch any error that may ooccur with other expression in compile time. For instance, you cannot run the follwing code:
+On top of that, logical operators use short-circuit evaluation to consider its expressions. Specifically, if the first expression already fixes the overall result (e.g. `true || ...`, `false && ...`), there is no need to execute other expressions. Additionally, the use of parenthesis `()` does not prevent short-circuit from happening. For example, `true || (true && false)` will be short-circuit as true because the leftmost value is `true`, so there is no need evaluating the rest.
+
+ Short-circuit is used to optimize run time, yet it may cause confusing if other expression is a function and it supposes to run. However, that does not mean that you can write dirty code. Swift will catch any error that may ooccur with other expression in compile time. For instance, you cannot run the follwing code:
 
 ```swfit
 // Example of a dirty code catched in compile time
@@ -380,10 +382,16 @@ Swift includes several range operators, which are shortcuts for expressing a ran
 When declaring a range operator, you have to choose pick one from each two groups above. For example, a range operator can be closed and two-sided, or half-opened and one-sided. Below are some examples of range operators.
 
 ```swift
-[..<2]     // [...,-2,-1,0,1]
-[2...]     // [2,3,4,5,6,7,...]
-[2..<6]    // [2,3,4,5]
-[2...6]    // [2,3,4,5,6]
+..<2     // [...,-2,-1,0,1]
+2...     // [2,3,4,5,6,7,...]
+2..<6    // [2,3,4,5]
+2...6    // [2,3,4,5,6]
 ```
 
 In the upcoming section regarding `for-in` loop, you may see these operators appear as their implication is to use within a loop.
+
+
+## References
+
+Inc., A. (2022). *Language Guide*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/LanguageGuide  
+

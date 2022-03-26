@@ -43,3 +43,27 @@ print(2 != 1)   // true
 /* or even strings */
 print("zebran" < "apple")  // false since character will be converted to ascii number, then they get compared
 print("Zebran" < "apple")  // true since "Z" has smaller ascii number than "a"
+
+
+// LOGICAL OPERATOR
+
+var hello = "Hello"
+print(true || hello.count == 5)     // true, with short-circuit
+print(true || (hello.count == 5))   // true, with short-circuit
+print(false || hello.count == 5)    // true, no short-circuit
+
+print(true || true && false)    // false
+// That equals to:
+print((true || true) && false)  // false
+// And also equals to:
+print((true || true) && !true)    // false
+// But not equals to:
+print(true || (true && false))  // true
+
+
+// RANGE OPERATOR
+
+..<2      // [...,-2,-1,0,1]
+2...      // [2,3,4,5,6,7,...]
+2..<6     // [2,3,4,5]
+2...6     // [2,3,4,5,6]

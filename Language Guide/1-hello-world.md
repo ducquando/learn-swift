@@ -46,3 +46,6 @@ but it spreads over many lines
 ```
 
 While single-line comments are most used for code explanation, multi-line comments are used for code documentation.
+
+## References
+Inc., A. (2022). *Language Guide*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/LanguageGuide  

@@ -7,11 +7,8 @@
   - [1.3. Guard](#13-guard)  
 - [2. Iteration](#2-iteration)  
   - [2.1. While Loop](#21-while-loop)  
-  - [2.2. For-in Loop](#22-forin-loop)  
+  - [2.2. For-in Loop](#22-for-in-loop)  
 - [3. Control Transfer](#3-control-transfer)  
-  - [3.1. Continue](#31-continue)  
-  - [3.2. Break](#32-break)  
-  - [3.3. Fallthrough](#33-fallthrough)  
 
 ## 1. Selection
 As default, *all* the codes will be run singly and top-down. However, it’s often useful to execute certain parts of code depending on the value of one or more conditions, which is called conditional branch. In Swift, there are three ways to add conditional branch to your code: `if`, `switch`, and `guard`.
@@ -68,11 +65,11 @@ if age > 18 && age < 23 {
 // Young Adult
 ```
 
-Like logical statement, Swift also uses [short circuit](../../../Language%20Guide/2-simple-statements/#35-logical) on `if-else if-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
+Like logical statement, Swift also uses [short circuit](../../../language%20guide/2-simple-statements/#35-logical) on `if-else if-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
 
 ### 1.2. Switch
 
-A `switch` statement allows certain blocks of code to be executed depending on the value of a control expression. The control expression of the `switch` statement is evaluated and then compared with the patterns specified in each case. If a match is found, the program executes the statements listed within the scope of that case.
+A `switch` statement allows certain blocks of code to be executed depending on the value of a control expression. The control expression of the `switch` statement is evaluated and then compared with the patterns specified in each case. If a match is found, the program executes *only* the statements listed within the scope of that case. It will not allow implicit fallthrough. However, if you want to have a fallthrough in `switch`, you can explicitly tell Switch to do by using a control transfer statement called [`fallthrough`](#3-control-transfer).
 
 Unlike other languages, the values of expressions your code can branch on are very flexible. Floating-point numbers, strings, tuples, instances of custom classes, and optionals are valid values of expression. Moreover, you can use value binding `let x = ...` along with `where` clause to match some specific values. Furthermore, the underscore character `_`, also known as the wildcard pattern, is used to match *any possible value*. 
 
@@ -109,7 +106,33 @@ default:
 // Young Adult
 ```
 
+One more thing to note, the key difference between `if` and `switch` in Switch is that the latter is exhaustive. Saying, there has to have at least one case that matches the control expression. Usually, we can obtain this through `default` case, which is similar to `else` in `if` statement. And in case we did not want anything to happen in a default (or any) case, we can use another control transfer statement called [`break`](#3-control-transfer).
+
 ### 1.3. Guard
+
+The `guard` statement is an opposite of `if` statement. It executes statements depending on the Boolean value of an expression. 
+
+Although it uses the same method as `if` (executing the code if the condition is true), it is normally used to execute a code block inside `else` branch if the condition is `false`. And the condition is normally an optional binding that returns `true` or `false` given the value's existence.
+
+Furthermore,` guard` is typically used inside a function or an iteration. As a result, a `guard` statement always has an `else` clause which includes a [control transfer statement](#3-control-transfer) such as `return`, `continue`, and `throw` to exit the function/iteration.
+
+```swift
+// Example of a guard statement 
+
+for i in 2...10 {
+  // guard condition to check the even number
+  guard i % 2 == 0 else {
+      print(i)          // only print odd number
+      continue          // continue the iteration
+  }
+}
+// 3
+// 5
+// 7
+// 9
+```
+
+The above code illustrates the use of `guard` statement inside a for-in loop. Nevertheless, what does `for-in` loop mean? Let's find out!
 
 ## 2. Iteration
 
@@ -272,20 +295,107 @@ while let name = nameIterator.next {
 ```
 
 ## 3. Control Transfer
-Control transfer statements change the order in which your code is executed, by transferring control from one piece of code to another. Swift has five control transfer statements: `continue`, `break`, `fallthrough`, `return`, and `throw`.
+Control transfer statements change the order in which your code is executed, by transferring control from one piece of code to another. Swift has three important control transfer statements: `continue`, `break`, and `fallthrough` that relate to the control flow structures.
 
-### 3.1. Continue
+<table>
+<thead>
+  <tr>
+    <th>continue</th>
+    <th>break</th>
+    <th>fallthrough</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td>Terminates the entire control flow statement immediately</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Provides vulnerabilities on code block since the rest of code is ignored.<br>More dangerous than a short circuit.</td>
+    <td>Provides vulnerabilities on code block since two (or more) cases are executed instead of only one</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 
-The `continue` statement tells a loop to stop what it’s doing and start again at the beginning of the next iteration through the loop. 
+Below are some examples of some control transfer statements.
 
-The `break` statement ends execution of an entire control flow statement immediately. Break can be used inside a `switch` or `loop` statement when you want to terminate the execution early.
+```swift
+// Example of continue statement in for-in loop
 
-Continue and break provide vulnerabilities on code block since the rest of code will not be executed. It is even more dangerous than a short circuit.
+for i in 0...5 {
+    if i % 2 == 0 {   // skip even number
+        continue
+    }
+    print(i)          // print odd number only
+}
+// 1
+// 3
+// 5
+```
+
+```swift
+// Example of break statement in while loop
+
+var num = 20
+while true {
+    if num % 2 == 1 {   // terminate if odd number
+        break
+    }
+    num += 1            // increase by 1
+}
+print(num)              // 21
 
 
+// Example of break statement in switch
 
-### 3.2. Break
+var num = 20
+switch num {
+case ...5:
+    num = 5
+case ...10:
+    num = 10
+case ...15:
+    num = 15
+default:        // it gets here
+    break       
+}
+print(num)      // 20 - unchanged
+```
 
-### 3.3. Fallthrough
+```swift
+// Example of fallthrough in switch
 
+var num = 10
+switch num {
+case 15..<20:
+    num = 20
+case 10..<15:    // it gets here
+    num = 15
+    fallthrough
+case 5..<10:     // then fall into here
+    num = 10
+case ..<5:       // does not get here
+    num = 5
+default:
+    break
+}
+print(num)       // 10
+```
 
+## References
+Inc., A. (2022). *About the Language Reference*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html  
+
+Inc., A. (2022). *Language Guide*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/LanguageGuide  
+
+Veen, T. in't. (2019). Chapter 9. Iterators, sequences, and collections. In *Swift in depth*. Manning. 

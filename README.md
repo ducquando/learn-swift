@@ -1,12 +1,12 @@
 # learn-swift
 
-A language guide project on using Swift from CS308 Programming Languages at Fulbright University Vietnam
+A guidance project on using Swift from CS308 Programming Languages at Fulbright University Vietnam
   
 ## General Information
 
 Swift was *created on December 3, 2015, by Apple* on an attempt to replace the old-dying Objective-C for its application development purpose. However, in Stack Overflow's 2021 developer survey, only 5% of the community use Swift regularly, which is a very small percentage.
 
-So, why learn Swift? If you are looking for an easy, interacting but powerful programming language, Swift is the right choice for you. Apple even advertises that anyone, even children having no experience with coding, can learn it. However, if you want to become an Apple developer, learning Swift is a must.
+So, why learn Swift? If you are looking for an easy, interacting but powerful programming language[1], Swift is the right choice for you. Apple even advertises that anyone, even children having no experience with coding, can learn it. However, if you want to become an Apple developer, learning Swift is a must.
 
 Apple also creates a paired compiler to run Swift code, which is named Xcode. You may find Xcode hard-to-use at first, but it will become mush easier and more powerful when continue being used. Additionally, SwiftUI, an UI development tool integrated in Xcode, is made in a way that runs and previews the code’s result directly on an Apple device instead of a console or pop-up window like Python does.
 
@@ -30,15 +30,19 @@ Once you have done all steps, you are ready to begin.
 
 <sup>1</sup> For more instruction on installing and running Xcode, please visit [Apple Developer: Xcode](https://developer.apple.com/documentation/xcode).
 
-## Language Guide
+## Guide Structure
+```
+.
+|__ code
+|__ language guide
+```
+There are 2 folders:
+- *code* contains demo code shown in language guide
+- *language guide* contains my guidance to Swift, written in markdown.
 
-1. [Hello, world!](Language%20Guide/1-hello-world.md)  
-2. [Simple Statements](Language%20Guide/2-simple-statements.md)  
-3. [Control Flow Statements](Language%20Guide/3-control-flow-statements.md)  
+For the convienience, code file will be named after the guidance's name. Open folder [language guide](language%20guide) to begin.
 
 ## References
-Inc., A. (2022). About the Language Reference. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html  
+Inc., A. (2022). *About Swift*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book
 
-Inc., A. (2022). Language Guide. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/LanguageGuide  
-
-Veen, T. in't. (2019). Swift in depth. Manning.   
+Overflow, S. (2021). *2021 Developer Survey*. Stack Overflow. Retrieved March 26, 2022, from https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages  
