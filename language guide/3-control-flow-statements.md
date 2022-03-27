@@ -1,5 +1,7 @@
 # Control Flow Statements
 
+Do you know not all code in your Swift program run? 
+
 ### Table of Content
 - [1. Selection](#1-selection)  
   - [1.1. If](#11-if)  
@@ -307,23 +309,22 @@ Control transfer statements change the order in which your code is executed, by 
 </thead>
 <tbody>
   <tr>
-    <td></td>
-    <td>Terminates the entire control flow statement immediately</td>
-    <td></td>
+    <td>Skip the current iteration and moves to the next one</td>
+    <td>Terminate the entire control flow statement immediately</td>
+    <td>Continue the program execution to the next case, regardless of matching control expression</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Used in all iteration control statements (for-in, while)</td>
+    <td>Used in all iteration control statements (for-in, while) and selection control statement (switch)</td>
+    <td>Used in selection control statement (switch)</td>
   </tr>
   <tr>
-    <td colspan="2">Provides vulnerabilities on code block since the rest of code is ignored.<br>More dangerous than a short circuit.</td>
-    <td>Provides vulnerabilities on code block since two (or more) cases are executed instead of only one</td>
+    <td colspan="2">Provide vulnerabilities on code block since the rest of code is ignored.<br>More dangerous than a short circuit.</td>
+    <td>Provide vulnerabilities on code block since two (or more) cases are executed instead of only one</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td colspan="2">Have effect on the innermost in case of nested control statement. However, can be told to have effect on a specific statement using label.</td>
+    <td>Have effect on the current case and one case right below it</td>
   </tr>
 </tbody>
 </table>
