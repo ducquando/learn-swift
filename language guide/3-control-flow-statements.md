@@ -1,6 +1,6 @@
 # Control Flow Statements
 
-Do you know not all code in your Swift program run? 
+Do you know not all codes in your Swift program run?
 
 ### Table of Content
 - [1. Selection](#1-selection)  
@@ -67,7 +67,21 @@ if age > 18 && age < 23 {
 // Young Adult
 ```
 
-Like logical statement, Swift also uses [short circuit](../../../language%20guide/2-simple-statements/#35-logical) on `if-else if-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
+Besides, we can use a constant declaration `let` statement as the condition. The declaration returns `true` if it's executable, and returns `false` when the assigning value is `nil` - meaning in-executable.
+
+```swift
+// Examples of using let statement as condition
+let names = ["Quan", "Do", nil, "Duc"]
+var index = 0
+if let name = names[0] {
+    print(name)
+} else {
+    print("inexecutable")
+}
+// Quan
+```
+
+Like logical statement, Swift also uses [short circuit](../../../language%20guide/2-simple-statements/#4-short-circuit-evaluation) on `if-else if-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
 
 ### 1.2. Switch
 
@@ -75,7 +89,7 @@ A `switch` statement allows certain blocks of code to be executed depending on t
 
 Unlike other languages, the values of expressions your code can branch on are very flexible. Floating-point numbers, strings, tuples, instances of custom classes, and optionals are valid values of expression. Moreover, you can use value binding `let x = ...` along with `where` clause to match some specific values. Furthermore, the underscore character `_`, also known as the wildcard pattern, is used to match *any possible value*. 
 
-Same as `if`, `switch` also allows compound case by writing several patterns after case, with a comma between each of the patterns. If any of the patterns match, then the case is considered to match. Chained `switch` also shares the same behavior of `if` statement, which uses short-circuit evaluation.
+Same as `if`, `switch` also allows compound case by writing several patterns after case, with a comma between each of the patterns. If any of the patterns match, then the case is considered to match. Chained `switch` also shares the same behavior of `if` statement, which uses [short-circuit evaluation](../../../language%20guide/2-simple-statements/#4-short-circuit-evaluation).
 
 ```swift
 // Examples of switch statement
@@ -114,7 +128,7 @@ One more thing to note, the key difference between `if` and `switch` in Switch i
 
 The `guard` statement is an opposite of `if` statement. It executes statements depending on the Boolean value of an expression. 
 
-Although it uses the same method as `if` (executing the code if the condition is true), it is normally used to execute a code block inside `else` branch if the condition is `false`. And the condition is normally an optional binding that returns `true` or `false` given the value's existence.
+Although it uses the same method as `if` (executing the code if the condition is true), it is normally used to execute a code block inside `else` branch if the condition is `false`. And the condition is normally an optional binding that returns `true` or `false` given the value's existence. Similar to `if` statement, `guard` also accepts constant declaration as the condition.
 
 Furthermore,` guard` is typically used inside a function or an iteration. As a result, a `guard` statement always has an `else` clause which includes a [control transfer statement](#3-control-transfer) such as `return`, `continue`, and `throw` to exit the function/iteration.
 
@@ -142,7 +156,7 @@ There are two main types of iteration in Swift: `while` loop and `for-in` loop. 
 
 ### 2.1. While loop
 
-A `while` loop performs a set of statements until a condition becomes `false`. There are two types of `while` loop: 
+A `while` loop performs a set of statements until a condition becomes `false`. There are two types of `while` loop: `while` and `repeat-while`.
 - `while` evaluates its condition at the start of each pass through the loop.
 ```swift
 while condition {
@@ -212,7 +226,7 @@ repeat {
 // Executable
 ```
 
-Besides, we can use a variable declaration statement as the loop's condition. The declaration returns `true` if it's executable, and returns `false` when the assigning value is `nil` - meaning in-executable.
+Besides, we can also use a constant declaration statement as the loop's condition.
 
 ```swift
 // Examples of using let statement as loop's condition
@@ -393,6 +407,9 @@ default:
 }
 print(num)       // 10
 ```
+
+## Demo Code
+Above example codes are avaialable in the folder *Code* under the name [3-control-flow-statements.playground](../../../code/3-control-flow-statements.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../README.md/#code-preview).
 
 ## References
 Inc., A. (2022). *About the Language Reference*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html  

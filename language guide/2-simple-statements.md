@@ -16,6 +16,7 @@ Now, you have successfully write your first code with some comments in Swift. Le
   - [3.4. Comparison](#34-comparison)  
   - [3.5. Logical](#35-logical)  
   - [3.6. Range](#36-range)  
+- [4. Short-circuit Evaluation])(#4-short-circuit-evaluation)
 
 ## 1. Data Types and Data Binding
 
@@ -331,15 +332,7 @@ print((true || true) && !true)    // false
 print(true || (true && false))  // true
 ```
 
-On top of that, logical operators use short-circuit evaluation to consider its expressions. Specifically, if the first expression already fixes the overall result (e.g. `true || ...`, `false && ...`), there is no need to execute other expressions. Additionally, the use of parenthesis `()` does not prevent short-circuit from happening. For example, `true || (true && false)` will be short-circuit as true because the leftmost value is `true`, so there is no need evaluating the rest.
-
- Short-circuit is used to optimize run time, yet it may cause confusing if other expression is a function and it supposes to run. However, that does not mean that you can write dirty code. Swift will catch any error that may ooccur with other expression in compile time. For instance, you cannot run the follwing code:
-
-```swfit
-// Example of a dirty code catched in compile time
-
-print(true || ("dar" = 9))   // error: cannot compare String with Int
-```
+On top of that, logical operators use [short-circuit evaluation](#4-short-circuit-evaluation) to consider its expressions, which allows one to write dirty code without being reported by the compiler.
 
 ### 3.6. Range
 Swift includes several range operators, which are shortcuts for expressing a range of values and can be characterized as:
@@ -390,6 +383,34 @@ When declaring a range operator, you have to choose pick one from each two group
 
 In the upcoming section regarding `for-in` loop, you may see these operators appear as their implication is to use within a loop.
 
+## 4. Short-circuit Evaluation
+
+*Short-circuiting* is a programming concept by which the compiler skips the execution or evaluation of some sub-expressions in a logical expression. The compiler stops evaluating the further sub-expressions as soon as the value of the expression is determined.
+
+Specifically, if the first expression already fixes the overall result (e.g. `true || ...`, `false && ...`), there is no need to execute other expressions. Additionally, the use of parenthesis `()` does not prevent short-circuit from happening. For example, `true || (true && false)` will be short-circuit as true because the leftmost value is `true`, so there is no need evaluating the rest.
+
+Short-circuit is used to optimize run time, yet it may cause confusing if other expression is a dirty code or it is a suppose-to-run function. There are few obvious cases of dirty code that Swift can catch during compile time, yet most cases will not be catch. For instance, you cannot run the follwing codes:
+
+```swfit
+// Example of dirty codes catched in compile time
+
+print(true || ("dar" == 9))   // error: cannot compare String with Int
+print(true || 9 / 0 == 0)     // error: cannot divide by 0
+```
+
+However, the following code will be run successfully, which may lead to program vulnerbility.
+
+```swfit
+// Example of dirty codes NOT catched because of short-circuit
+
+var zero = 0
+print(true || 9 / zero == 0)     // true
+```
+
+As you can see, the program will print out "true" and won't report any error in the code. The reason behind is that the above code is not lexically wrong, so it will be passed to run time without being catched in the compile time. In run time, the code will be short-circuited, leading to the error will never be reported. Therefore, one must be very careful of short-circuit of any forms.
+
+## Demo Code
+Above example codes are avaialable in the folder *Code* under the name [2-simple-statements.playground](../../../code/2-simple-statements.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../README.md/#code-preview).
 
 ## References
 

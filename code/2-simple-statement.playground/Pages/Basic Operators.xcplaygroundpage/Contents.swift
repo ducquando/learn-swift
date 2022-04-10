@@ -67,3 +67,9 @@ print(true || (true && false))  // true
 2...      // [2,3,4,5,6,7,...]
 2..<6     // [2,3,4,5]
 2...6     // [2,3,4,5,6]
+
+
+// SHORT-CIRCUIT
+
+var zero = 0
+print(true || 9 / zero == 0)     // true

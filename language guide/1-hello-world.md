@@ -47,5 +47,8 @@ but it spreads over many lines
 
 While single-line comments are most used for code explanation, multi-line comments are used for code documentation.
 
+## Demo Code
+Above example codes are avaialable in the folder *Code* under the name [1-hello-world.playground](../../../code/1-hello-world.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../README.md/#code-preview).
+
 ## References
 Inc., A. (2022). *Language Guide*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/LanguageGuide  

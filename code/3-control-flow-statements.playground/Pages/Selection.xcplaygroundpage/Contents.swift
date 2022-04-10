@@ -39,6 +39,16 @@ if age > 18 && age < 23 {
 }
 // Young Adult
 
+// USING CONSTANT DECLARATION AS CONDITION
+let names = ["Quan", "Do", nil, "Duc"]
+var index = 0
+if let name = names[0] {
+    print(name)
+} else {
+    print("inexecutable")
+}
+// Quan
+
 
 // SWITCH STATEMENT
 
