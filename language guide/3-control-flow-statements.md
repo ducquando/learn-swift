@@ -409,7 +409,7 @@ print(num)       // 10
 ```
 
 ## Demo Code
-Above example codes are avaialable in the folder *Code* under the name [3-control-flow-statements.playground](../../../code/3-control-flow-statements.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../README.md/#code-preview).
+Above example codes are avaialable in the folder *Code* under the name [3-control-flow-statements.playground](../../../tree/main/code/3-control-flow-statements.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../blob/main/README.md/#code-preview).
 
 ## References
 Inc., A. (2022). *About the Language Reference*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html  

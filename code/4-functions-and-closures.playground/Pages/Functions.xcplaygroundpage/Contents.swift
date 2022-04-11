@@ -41,7 +41,7 @@ print(mul)              // 32.0
 print(num1 * num2)      // 32
 
 
-// PARAMETERS
+// PARAMETERS AND ARGUMENT
 // Example of a function that takes in two parameters and sums them up
 func addNumbers(a: Int = 0, b: Int = 0) {
   let sum = a + b
@@ -52,7 +52,7 @@ addNumbers(a: 2, b: 3)        // Sum: 5
 addNumbers()                  // Sum: 0
 
 // Example of a swaping function that takes in 2 inout parameters
-func swap(a: inout Int, b: inout Int) {
+func swap(_ a: inout Int, _ b: inout Int) {
     let temporary = a
     a = b
     b = temporary
@@ -65,6 +65,8 @@ print("anotherNum is", anotherNum)       // anotherNum is 107
 swap(&someNum, &anotherNum)
 print("someNum is now", someNum)         // someNum is now 107
 print("anotherNum is now", anotherNum)   // anotherNum is now 3
+
+//swap(&7, &8)                           // error: cannot pass immutable value
 
 // Example of immutable list and list's elements as parameters
 // Comment out since it will prompt error in compile time

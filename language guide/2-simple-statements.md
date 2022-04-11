@@ -410,7 +410,7 @@ print(true || 9 / zero == 0)     // true
 As you can see, the program will print out "true" and won't report any error in the code. The reason behind is that the above code is not lexically wrong, so it will be passed to run time without being catched in the compile time. In run time, the code will be short-circuited, leading to the error will never be reported. Therefore, one must be very careful of short-circuit of any forms.
 
 ## Demo Code
-Above example codes are avaialable in the folder *Code* under the name [2-simple-statements.playground](../../../code/2-simple-statements.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../README.md/#code-preview).
+Above example codes are avaialable in the folder *Code* under the name [2-simple-statements.playground](../../../tree/main/code/2-simple-statements.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../blob/main/README.md/#code-preview).
 
 ## References
 

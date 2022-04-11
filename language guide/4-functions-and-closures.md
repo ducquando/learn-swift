@@ -8,9 +8,9 @@ How do functions break up? Maybe by stop calling each other!
     - [1.2. Return Values](#12-return-values)  
     - [1.3. Parameters and Arguments](#13-parameters-and-arguments)  
     - [1.4. Function Types](#14-function-types)  
-- [2. Overloaded Functions](#2-overloaded-functions) 
-- [3. Nested Functions](#3-nested-functions)  
-- [4. Library-provided Functions](#4-library-provided-fuctions)  
+- [2. Library-provided Functions](#2-library-provided-fuctions)  
+- [3. Overloaded Functions](#3-overloaded-functions)  
+- [4. Nested Functions](#4-nested-functions)  
 - [5. Recursions](#5-recursions)  
 
 ## 1. Functions
@@ -56,7 +56,7 @@ where:
 - `functionName` is the name of the already-declared function
 - `arguments` are associated `name: value` values passed to the parameters.
 
-By default, the number and the order of need-passed arguments is also those of parameters. Similar to parameter, arguments are also separated with one another by a comma `,`. One more thing, the argument's name and type must match those of parameter. Detailed information will be discussed more in the below section of [argument & parameter](#12-parameter-and-argument).
+By default, the number and the order of need-passed arguments is also those of parameters. Similar to parameter, arguments are also separated with one another by a comma `,`. One more thing, the argument's name and type must match those of parameter. Detailed information will be discussed more in the below section of [parameters & arguments](#13-parameters-and-arguments).
 
 Let's continue where we left. Below is the calling statement of the above-declared multiply function. Since the function requires 2 parameters: num1 and num2, we also have to give the calling statement 2 related arguments.
 
@@ -173,7 +173,7 @@ print(numList)
 
 Although parameters in Swift are *pass-by-value*, the default characteristic of parameter can be changed into *pass-by-reference* by using *in-out parameter*.
 
-An in-out parameter is the one that’s passed *in* to the function, is modified by the function, and is passed back *out* of the function to replace the original value. 
+An *in-out parameter* is the one that’s passed *in* to the function, is modified by the function, and is passed back *out* of the function to replace the original value. 
 
 To write an *in-out parameter*, place the `inout` keyword right before a parameter’s type and an ampersand `&` directly before argument variable’s name.
 
@@ -196,6 +196,12 @@ print("someNum is now", someNum)         // someNum is now 107
 print("anotherNum is now", anotherNum)   // anotherNum is now 3
 ```
 
+However, therer is some litmitations of inout parameters. You can only pass a variable as the argument for an in-out parameter. You can’t pass a constant or a literal value as the argument, because constants and literals can’t be modified. This example will prompt a compilt-time error message:
+
+```swift
+swap(&7, &8)           // error: cannot pass immutable value
+```
+
 #### b. Arguments
 
 The argument label is used when calling the function. Each argument is written in the function call with its argument label before it. By default, parameters use their parameter name as their argument label. However, one may want to specify the argument labels.
@@ -203,24 +209,31 @@ The argument label is used when calling the function. Each argument is written i
 In that case, you write an argument label before the parameter name, separated by a space. If you have an argument label, you will have to refer to it when call the function. For example:
 
 ```swift
-// Skeleton of a function with argument label
+// Example of a function with argument labels
 
-func someFunction(argumentLabel parameterName: Int) {
-    // In the function body, parameterName will be refered to
+var someNum = 3
+var anotherNum = 107
+func swap(firstSwap a: inout Int, secondSwap b: inout Int) {
+    let temporary = a
+    a = b
+    b = temporary
 }
-// Outside the function, argumentLabel will be used
-someFunction(argumentLabel: 8)
+swap(firstSwap: someNum, secondSwap: anotherNum)
 ```
 
 If you don’t want an argument label for a parameter, write an underscore `_` instead of an explicit argument label for that parameter. Then you can omit the argument label when call the function. 
 
 ```swift
-// Skeleton of a function with omitted argument label
+// Example of a function with omitted argument label
 
-func someFunction(_ parameterName: Int) {
-    // function body
+var someNum = 3
+var anotherNum = 107
+func swap(_ a: inout Int, _ b: inout Int) {
+    let temporary = a
+    a = b
+    b = temporary
 }
-someFunction(8)
+swap(&someNum, &anotherNum)
 ```
 
 ### 1.4. Function Types
@@ -445,10 +458,8 @@ print("The factorial of 5 is", factorial(5))  // The factorial of 5 is 120
 
 Taa daa! Our recursion works just in time for a break. After the break, we will move to something called `closure`.
 
-<-- ## 6. Closures -->
-
 ## Demo Code
-Above example codes are avaialable in the folder *Code* under the name [4-functions-and-closures.playground](../../../code/4-functions-and-closures.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../README.md/#code-preview).
+Above example codes are avaialable in the folder *Code* under the name [4-functions-and-closures.playground](../../../tree/main/code/4-functions-and-closures.playground). For instruction to preview code directly on Github, please refer to this section on [Code Preview](../../../blob/main/README.md/#code-preview).
 
 ## References
 Inc., A. (2022). *Language Guide*. The Swift Programming Language (Swift 5.6). Retrieved March 25, 2022, from https://docs.swift.org/swift-book/LanguageGuide  
