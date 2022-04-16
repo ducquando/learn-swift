@@ -31,7 +31,9 @@ Once you have done all steps, you are ready to begin.
 <sup>1</sup> For more instruction on installing and running Xcode, please visit [Apple Developer: Xcode](https://developer.apple.com/documentation/xcode).
 
 ## Language Guide
+<!--
 #### Table of contents
+
 - [A. The Basics](#a-the-basics)
   - [Hello, world!](#1-hello-world)  
   - [Commenting](#2-commenting)  
@@ -61,11 +63,11 @@ Once you have done all steps, you are ready to begin.
   - [Return Values](#2-return-values)  
   - [Parameters and Arguments](#3-parameters-and-arguments)  
   - [Function Types](#4-function-types)  
-  - [Library-provided Functions](#5-library-provided-fuctions)  
+  - [Library-provided Functions](#5-5-library-provided-functions)  
   - [Overloaded Functions](#6-overloaded-functions)  
   - [Nested Functions](#7-nested-functions)  
   - [Recursions](#8-recursions)  
-
+-->
 
 ### A. The Basics
 #### 1. Hello, world!
@@ -243,7 +245,7 @@ var name : String?     // Set name to either have a value or not at all
 var age : Int? = nil   // This is equivalent to the first line
 ```
 
-Last but not least, manual type annotation can reduces wrong data type re-assignment and make your debug easier. This is very useful for number-like variables calculating operators, which you will learn in the following section regarding [arithmetic operators](#32-arithmetic).
+Last but not least, manual type annotation can reduces wrong data type re-assignment and make your debug easier. This is very useful for number-like variables calculating operators, which you will learn in the following section regarding [arithmetic operators](#2-arithmetic).
 
 ### C. Basic Operators
 
@@ -399,7 +401,7 @@ print((true || true) && !true)    // false
 print(true || (true && false))  // true
 ```
 
-On top of that, logical operators use [short-circuit evaluation](#4-short-circuit-evaluation) to consider its expressions, which allows one to write dirty code without being reported by the compiler.
+On top of that, logical operators use [short-circuit evaluation](#d-short-circuit-evaluation) to consider its expressions, which allows one to write dirty code without being reported by the compiler.
 
 #### 6. Range
 Swift includes several range operators, which are shortcuts for expressing a range of values and can be characterized as:
@@ -545,15 +547,15 @@ if let name = names[0] {
 // Quan
 ```
 
-Like logical statement, Swift also uses [short circuit](../../../language%20guide/2-simple-statements/#4-short-circuit-evaluation) on `if-else if-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
+Like logical statement, Swift also uses [short circuit](#d-short-circuit-evaluation) on `if-else if-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
 
 #### 2. Switch
 
-A `switch` statement allows certain blocks of code to be executed depending on the value of a control expression. The control expression of the `switch` statement is evaluated and then compared with the patterns specified in each case. If a match is found, the program executes *only* the statements listed within the scope of that case. It will not allow implicit fallthrough. However, if you want to have a fallthrough in `switch`, you can explicitly tell Switch to do by using a control transfer statement called [`fallthrough`](#3-control-transfer).
+A `switch` statement allows certain blocks of code to be executed depending on the value of a control expression. The control expression of the `switch` statement is evaluated and then compared with the patterns specified in each case. If a match is found, the program executes *only* the statements listed within the scope of that case. It will not allow implicit fallthrough. However, if you want to have a fallthrough in `switch`, you can explicitly tell Switch to do by using a control transfer statement called [`fallthrough`](#g-control-transfer-statements).
 
 Unlike other languages, the values of expressions your code can branch on are very flexible. Floating-point numbers, strings, tuples, instances of custom classes, and optionals are valid values of expression. Moreover, you can use value binding `let x = ...` along with `where` clause to match some specific values. Furthermore, the underscore character `_`, also known as the wildcard pattern, is used to match *any possible value*. 
 
-Same as `if`, `switch` also allows compound case by writing several patterns after case, with a comma between each of the patterns. If any of the patterns match, then the case is considered to match. Chained `switch` also shares the same behavior of `if` statement, which uses [short-circuit evaluation](../../../language%20guide/2-simple-statements/#4-short-circuit-evaluation).
+Same as `if`, `switch` also allows compound case by writing several patterns after case, with a comma between each of the patterns. If any of the patterns match, then the case is considered to match. Chained `switch` also shares the same behavior of `if` statement, which uses [short-circuit evaluation](#d-short-circuit-evaluation).
 
 ```swift
 // Examples of switch statement
@@ -586,7 +588,7 @@ default:
 // Young Adult
 ```
 
-One more thing to note, the key difference between `if` and `switch` in Switch is that the latter is exhaustive. Saying, there has to have at least one case that matches the control expression. Usually, we can obtain this through `default` case, which is similar to `else` in `if` statement. And in case we did not want anything to happen in a default (or any) case, we can use another control transfer statement called [`break`](#3-control-transfer).
+One more thing to note, the key difference between `if` and `switch` in Switch is that the latter is exhaustive. Saying, there has to have at least one case that matches the control expression. Usually, we can obtain this through `default` case, which is similar to `else` in `if` statement. And in case we did not want anything to happen in a default (or any) case, we can use another control transfer statement called [`break`](#g-control-transfer-statements).
 
 #### 3. Guard
 
@@ -594,7 +596,7 @@ The `guard` statement is an opposite of `if` statement. It executes statements d
 
 Although it uses the same method as `if` (executing the code if the condition is true), it is normally used to execute a code block inside `else` branch if the condition is `false`. And the condition is normally an optional binding that returns `true` or `false` given the value's existence. Similar to `if` statement, `guard` also accepts constant declaration as the condition.
 
-Furthermore,` guard` is typically used inside a function or an iteration. As a result, a `guard` statement always has an `else` clause which includes a [control transfer statement](#3-control-transfer) such as `return`, `continue`, and `throw` to exit the function/iteration.
+Furthermore,` guard` is typically used inside a function or an iteration. As a result, a `guard` statement always has an `else` clause which includes a [control transfer statement](#g-control-transfer-statements) such as `return`, `continue`, and `throw` to exit the function/iteration.
 
 ```swift
 // Example of a guard statement 
@@ -868,7 +870,7 @@ where:
 - `functionName` is the name of the already-declared function
 - `arguments` are associated `name: value` values passed to the parameters.
 
-By default, the number and the order of need-passed arguments is also those of parameters. Similar to parameter, arguments are also separated with one another by a comma `,`. One more thing, the argument's name and type must match those of parameter. Detailed information will be discussed more in the below section of [parameters & arguments](#13-parameters-and-arguments).
+By default, the number and the order of need-passed arguments is also those of parameters. Similar to parameter, arguments are also separated with one another by a comma `,`. One more thing, the argument's name and type must match those of parameter. Detailed information will be discussed more in the below section of [parameters & arguments](#3-parameters-and-arguments).
 
 Let's continue where we left. Below is the calling statement of the above-declared multiply function. Since the function requires 2 parameters: num1 and num2, we must give the calling statement 2 related arguments.
 
@@ -905,7 +907,7 @@ func multiply(num1: Int, num2: Int) {
 
 ##### b. Function With Return Values
 
-If we want our function to return some value, we use the `return` statement and `return type`. A function with a defined return type can’t allow control to fall out of the bottom of the function without returning a value, and attempting to do so will result in a compile-time error.
+If we want our function to return some value, we use the `return` statement and *return type*. A function with a defined return type can’t allow control to fall out of the bottom of the function without returning a value, and attempting to do so will result in a compile-time error.
 
 With *return values*, we can access and assign the result of the function to a variable in outer scope. For example, we can modify the function `multiply()` above to returns an Int rather than printing that Int out, then assigns the return value to a variable called `result`.
 
@@ -919,7 +921,7 @@ var result = multiply(num1: 4, num2: 8)
 print(result)           // 32
 ```
 
-Quite a cheat but [`Tuple`](../../../language%20guide/2-simple-statements.md#e-tuples) can be used as the `return type` to make a function to return multiple values as part of one compound return value. For example, instead of returning just the result, we will want to return all integers in the function `multiply()`.
+Quite a cheat but [`Tuple`](#e-tuples) can be used as the *return type* to make a function to return multiple values as part of one compound return value. For example, instead of returning just the result, we will want to return all integers in the function `multiply()`.
 
 ```swift
 // Example of a function with many return values
