@@ -21,6 +21,7 @@ There are many resources for developers who are investigating Swift such as:
 
 Let's get the ball rolling, aren't we?
 To code in Swift, you have to:
+
   1. Have a Mac (Swift cannot be run from a Window or Linux device)
   2. Have an Apple ID. If you have not created one, please visit [Apple ID](https://appleid.apple.com) and click on *Create Your Apple ID* on the top right of the screen to create an Apple ID. 
   3. Install [Xcode](https://developer.apple.com/xcode/) on your Mac (once again, Xcode is an Apple-developed compiler for Swift). On the site, you will find that there are 2 downloading options: *Download from Website* and *Download from Mac App Store*. For beginner, I'd recommend you choosing the latter (*Download from Mac App Store*) for connivence as it will install the newest version along with all necessary tools. But if you want to choose the version (including both official and beta versions) of Xcode and manually install the additional tool, choose *Download from Website*. To be clear, the version I use for this tutorial is 13.2.1.<sup>1</sup>
@@ -28,49 +29,13 @@ To code in Swift, you have to:
   
 Once you have done all steps, you are ready to begin.
 
-<sup>1</sup> For more instruction on installing and running Xcode, please visit [Apple Developer: Xcode](https://developer.apple.com/documentation/xcode).
+<sup>1</sup> For more instructions on installing and running Xcode, please visit [Apple Developer: Xcode](https://developer.apple.com/documentation/xcode).
 
 ## Language Guide
-<!--
-#### Table of contents
-
-- [A. The Basics](#a-the-basics)
-  - [Hello, world!](#1-hello-world)  
-  - [Commenting](#2-commenting)  
-  - [Data Types](#3-data-types)
-  - [Data Binding](#4-data-binding)    
-- [B. Constants and Variables](#b-constants-and-variables)  
-  - [Naming Convention](#1-naming-convention)  
-  - [Declaring Syntax](#2-declaring-syntax)  
-- [C. Basic Operators](#C-basic-operators)    
-  - [Assignment](#1-assignment)  
-  - [Arithmetic](#2-arithmetic)  
-  - [Compound Assignment](#3-compound-assignment)  
-  - [Comparison](#4-comparison)  
-  - [Logical](#5-logical)  
-  - [Range](#6-range)  
-- [D. Short-circuit Evaluation](#d-short-circuit-evaluation)  
-- [E. Selection Statements](#e-selection-statements)  
-  - [If](#1-if)  
-  - [Switch](#2-switch)  
-  - [Guard](#3-guard)  
-- [F. Iteration Statements](#f-iteration-statements)  
-  - [While Loop](#1-while-loop)  
-  - [For-in Loop](#2-for-in-loop)  
-- [G. Control Transfer Statements](#g-control-transfer-statements)  
-- [H. Functions](#h-functions)  
-  - [Function Declaration and Calling](#1-function-declaration-and-calling)  
-  - [Return Values](#2-return-values)  
-  - [Parameters and Arguments](#3-parameters-and-arguments)  
-  - [Function Types](#4-function-types)  
-  - [Library-provided Functions](#5-5-library-provided-functions)  
-  - [Overloaded Functions](#6-overloaded-functions)  
-  - [Nested Functions](#7-nested-functions)  
-  - [Recursions](#8-recursions)  
--->
 
 ### A. The Basics
-#### 1. Hello, world!
+***
+#### 1. "Hello, world!"
 
 Printing in Swift is easy as it can be done with just one line of code, which is `print()`. You don't have to include the semi-colon `;` at the end of each line of code, but you can do that if your want to.
 
@@ -89,8 +54,6 @@ print(10+2)
 ```
 
 #### 2. Commenting
-
-Code is read by other people more frequently than you think. Therefore, we use comments so that other programmers can understand what we write. Since a comment is only visible to humans and gets ignored by computers, you don't have to worry that comment will destroy your code. In fact, you're encouraged to write comments.
 
 There are 2 types of comments in Swift: single-line and multi-line. Single-line comments are often used to explain the logic of a code, and multi-line comments are used to explain a whole set of code.
 
@@ -173,6 +136,8 @@ Swift **binds data types at compile time**, which makes it a type-safe programmi
 
 ### B. Constants and Variables
 
+***
+
 Swift uses variables and constants to store and refer to values by an identifying name. While the value of a constant can’t be changed once it’s set, a variable can be set to a different value in the future. In another word, anything declared as variable is *mutable* (can add, remove, or change after declaration). Oppositely, anything declared as constant is *immutable* (cannot do anything with it after declaration).
 
 #### 1. Naming Convention
@@ -245,11 +210,9 @@ var name : String?     // Set name to either have a value or not at all
 var age : Int? = nil   // This is equivalent to the first line
 ```
 
-Last but not least, manual type annotation can reduces wrong data type re-assignment and make your debug easier. This is very useful for number-like variables calculating operators, which you will learn in the following section regarding [arithmetic operators](#2-arithmetic).
-
 ### C. Basic Operators
 
-An operator is a special symbol or phrase that you use to check, change, or combine values. In Swift, a operator is either unary (single target), binary (two targets), or ternary (three targets).
+***
 
 #### 1. Assignment
 
@@ -370,19 +333,10 @@ Each of the above comparison operators returns a Bool value to indicate whether 
 2 <= 1   // false 
 ```
 
-You can also compare two tuples if they have the same type and the same number of values. Tuples are compared from left to right, one value at a time, until the comparison finds two values that aren’t equal. Those two values are compared, and the result of that comparison determines the overall result of the tuple comparison. If all the elements are equal, then the tuples themselves are equal. For example:
-
-```swift
-// Examples of comparison operators on Tuple variables
-
-(1, "zebra") < (2, "apple")   // true because 1 is less than 2; "zebra" and "apple" aren't compared
-(3, "apple") < (3, "bird")    // true because 3 is equal to 3, and "apple" is less than "bird"
-(4, "dog") == (4, "dog")      // true because 4 is equal to 4, and "dog" is equal to "dog"
-```
-
 #### 5. Logical
 
 Logical operators modify or combine the Boolean logic values true and false. Swift supports the three standard logical operators:
+
 - NOT `!` inverts a Boolean value (`true` becomes `false`, and vice versa).
 - AND `&&` creates logical expressions where both values must be `true` for the overall expression to also be `true`.
 - OR `||` creates logical expressions in which only one of the two values has to be `true` for the overall expression to be `true`.
@@ -405,10 +359,11 @@ On top of that, logical operators use [short-circuit evaluation](#d-short-circui
 
 #### 6. Range
 Swift includes several range operators, which are shortcuts for expressing a range of values and can be characterized as:
+
 - Closed `...` or Half-Opened `..<`
 - Two-Sided `a  b` or One-Sided `a`,`b`
 
-#### a. Closed and Half-Opened
+##### a. Closed and Half-Opened
 
 <table>
 <thead>
@@ -432,14 +387,14 @@ Swift includes several range operators, which are shortcuts for expressing a ran
 </tbody>
 </table>
 
-#### b. Two-Sided and One-Sided
+##### b. Two-Sided and One-Sided
 
 | Two-Sided | One-Sided |
 | --- | --- |
 | `a..b` | `a..` `..b` |
 | limited in two directions | limited in one direction and continue as far as possible in the other |
 
-#### c. Full version
+##### c. Full version
 
 When declaring a range operator, you have to choose pick one from each two groups above. For example, a range operator can be closed and two-sided, or half-opened and one-sided. Below are some examples of range operators.
 
@@ -453,6 +408,8 @@ When declaring a range operator, you have to choose pick one from each two group
 In the upcoming section regarding `for-in` loop, you may see these operators appear as their implication is to use within a loop.
 
 ### D. Short-circuit Evaluation
+
+***
 
 *Short-circuiting* is a programming concept by which the compiler skips the execution or evaluation of some sub-expressions in a logical expression. The compiler stops evaluating the further sub-expressions as soon as the value of the expression is determined.
 
@@ -478,14 +435,18 @@ print(true || 9 / zero == 0)     // true
 
 As you can see, the program will print out "true" and won't report any error in the code. The reason behind is that the above code is not lexically wrong, so it will be passed to run time without being catched in the compile time. In run time, the code will be short-circuited, leading to the error will never be reported. Therefore, one must be very careful of short-circuit of any forms.
 
+***
+
 ### E. Selection Statements
-As default, *all* the codes will be run singly and top-down. However, it’s often useful to execute certain parts of code depending on the value of one or more conditions, which is called conditional branch. In Swift, there are three ways to add conditional branch to your code: `if`, `switch`, and `guard`.
+
+In Swift, there are three ways to add conditional branch to your code: `if`, `switch`, and `guard`.
 
 #### 1. If
 
 An `if` statement is used for executing code based on the evaluation of one or more conditions, which are of type `Bool` or type bridged to `Bool` such as an optional binding declaration.
 
-There are two basic forms of an `if` statement, with and without `else`. While the former form allows code to be executed only when a condition is `true`, the latter enables one part of code to be executed when the condition is `true` and another part of code to be executed when the same condition is `false`. 
+There are two basic forms of an `if` statement, with and without `else`. While the former form allows code to be executed only when a condition is `true`, the latter enables one part of code to be executed when the condition is `true` and another part of code to be executed when the same condition is `false`. In addition, you can chain multiple `if-else` statement to execute a different conditional statement in case the *previous* conditional expression evaluates to `false`.
+
 
 ```swift
 // Examples of different forms of if statements
@@ -501,13 +462,7 @@ if age < 18 {
     print("Adult")
 }
 // Adult
-```
 
-Notice the use of curly brackets `{}`? It is used to avoid dangling-else ambiguity. In addition, you can chain multiple `if-else` statement to execute a different conditional statement in case the *previous* conditional expression evaluates to `false`.
-
-```swift
-// Examples of a chained if statements
-var age : Int = 20
 if age >= 23 {
     print("Adult")
 } else if age > 18 {
@@ -547,7 +502,7 @@ if let name = names[0] {
 // Quan
 ```
 
-Like logical statement, Swift also uses [short circuit](#d-short-circuit-evaluation) on `if-else if-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
+Like logical statement, Swift also uses [short circuit](#d-short-circuit-evaluation) on `if-elseif-else` statement. It means that Swift checks the conditions from top-down, the code block of the met condition is executed, and the rest code block will be ignored.
 
 #### 2. Switch
 
@@ -617,6 +572,8 @@ for i in 2...10 {
 The above code illustrates the use of `guard` statement inside a for-in loop. Nevertheless, what does `for-in` loop mean? Let's find out!
 
 ### F. Iteration Statements
+
+***
 
 There are two main types of iteration in Swift: `while` loop and `for-in` loop. While a `while` loop is used when we don't know the number of iterations before the first iteration begins, a `for-in` loop is used when we want to iterate a specific Sequence.
 
@@ -727,6 +684,9 @@ while let name = nameIterator.next {
 ```
 
 ### G. Control Transfer Statements
+
+***
+
 Control transfer statements change the order in which your code is executed, by transferring control from one piece of code to another. Swift has three important control transfer statements: `continue`, `break`, and `fallthrough` that relate to the control flow structures.
 
 <table>
@@ -826,6 +786,8 @@ print(num)       // 10
 
 ### H. Functions
 
+***
+
 A *function* is a reusable block of code that performs a specific task. There are two types of function in Swift: user-defined and library-provided. As explained by theirs names, the latter is already provided by Swift's library and the former has to be manually declared. 
 
 In Swift, there is no rule on where to place the function call and function declaration. It is similar to Java, so you can call the function before its declaration. Just reminds yourself that you have to declare it somewhere in the program. But how to declare and call a function? 
@@ -835,17 +797,10 @@ In Swift, there is no rule on where to place the function call and function decl
 Swift use `func` as a type keyword to declare a function. The full syntax is:
 
 ```swift
-func functionName(parameters) -> returnType {
+func functionName(name: type) -> returnType {
   // function body 
 }
 ```
-
-where:
-
-- `func` is the type keyword
-- `functionName` is any name given to the function. A function must have a distinguishable function name.
-- `parameters` are any `name: type` values passed to the function. A function can have zero, one, or more parameters. In the event of more-than-one parameters, they are separated with each other by a comma `,`.
-- and `returnType` is a specific type of value returned by the function. A function may or may not have an explicit return type. However, in the background, it always returns something.
 
 Below is an example of a function that takes in 2 numbers, multiplies them, and prints the output. The function does not return anything.
 
@@ -862,15 +817,10 @@ Although the function's purpose is to print out an integer, you won't see anythi
 Due to its resuability, a function has to be called so as to be executed. Calling function, in fact, is easy and similar to that in other programming language. The syntax is:
 
 ```swift
-functionName(arguments)
+functionName(name: value)
 ```
 
-where:
-
-- `functionName` is the name of the already-declared function
-- `arguments` are associated `name: value` values passed to the parameters.
-
-By default, the number and the order of need-passed arguments is also those of parameters. Similar to parameter, arguments are also separated with one another by a comma `,`. One more thing, the argument's name and type must match those of parameter. Detailed information will be discussed more in the below section of [parameters & arguments](#3-parameters-and-arguments).
+By default, the number and the order of need-passed arguments is also those of parameters. Additionally, the argument's name and type must match those of parameter. Detailed information will be discussed more in the below section of [parameters & arguments](#3-parameters-and-arguments).
 
 Let's continue where we left. Below is the calling statement of the above-declared multiply function. Since the function requires 2 parameters: num1 and num2, we must give the calling statement 2 related arguments.
 
@@ -891,10 +841,6 @@ multiply(num1: 20)             // error: missing argument
 
 *Return values* are the value that a function returns rather than doing other actions such as printing. Return values are extremely flexible in Swift as you can return nothing, one value, or multiple values.
 
-##### a. Function Without Return Value
-
-Functions aren’t required to define a return type. When a function doesn't have a return type means it doesn’t return a value. Therefore, its definition doesn’t include the return arrow (->) or a return type.
-
 ```swift
 // Example of a function with no return value
 
@@ -904,8 +850,6 @@ func multiply(num1: Int, num2: Int) {
 ```
 
 > Strictly speaking, this type of function does still return a value, even though no return value is defined. Functions without a defined return type return a special value of type `Void`. This is simply an empty tuple, which is written as `()`.
-
-##### b. Function With Return Values
 
 If we want our function to return some value, we use the `return` statement and *return type*. A function with a defined return type can’t allow control to fall out of the bottom of the function without returning a value, and attempting to do so will result in a compile-time error.
 
@@ -1020,7 +964,7 @@ However, therer is some litmitations of inout parameters. You can only pass a va
 swap(&7, &8)           // error: cannot pass immutable value
 ```
 
-#### b. Arguments
+##### b. Arguments
 
 The argument label is used when calling the function. Each argument is written in the function call with its argument label before it. By default, parameters use their parameter name as their argument label. However, one may want to specify the argument labels.
 
@@ -1200,10 +1144,10 @@ func recurse() {
 // Skeleton of recursion
 
 func recurse() {
-    if condition {
-        ...
-    }
-    
+   if num == 0 {
+    	return 1
+  	}
+    	
     recurse()
 }
 ```
@@ -1213,26 +1157,6 @@ func recurse() {
 The *recursive call* is basically a function call put on the function's last line. If the function returns something, the recursive call must be put in the return statement and the arguments must be changed.
 
 ```swift
-// Example of a return recursion that sums downwards
-
-func sumDownwards(_ x: Int) -> Int {
-    if x == 0 {
-        return 0
-    }
-    return x + sumDownwards(x-1)
-}
-
-print(sumDownwards(5))  // 15
-print(sumDownwards(1))  // 1
-```
-
-##### c. Applications
-
-Recursion has so many applications. It is required in problems concerning data structures and advanced algorithms, such as Graph and Tree Traversal. However, it takes a lot of stack space and uses more processor time, so one may avoid using it. However, recursion is still cool, isn't it?
-
-On the road to exploring recursion, let us make a function that calculates the factorial value of a number. For example, the factorial of 3 is 3! = 3 * 2 * 1 = 6. Because of that, we will use a base case that returns `1` when `num` equals `0`, and a recursive call of `num - 1`.
-
-```swift
 // Example of a recursive function calculating the the factorial value
 
 func factorial(_ num: Int) -> Int {
@@ -1240,6 +1164,7 @@ func factorial(_ num: Int) -> Int {
   if num == 0 {
     return 1
   }
+  
   // Recursive call
   return num * factorial(num - 1)
 }
@@ -1247,6 +1172,8 @@ func factorial(_ num: Int) -> Int {
 print("The factorial of 3 is", factorial(3))  // The factorial of 3 is 6
 print("The factorial of 5 is", factorial(5))  // The factorial of 5 is 120
 ```
+
+In the above example, we use a base case that returns `1` when `num` equals `0`, and a recursive call of `num - 1` to resemble the factorial equation's behavior.
 
 ## Demo Code
 
