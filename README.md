@@ -1749,6 +1749,34 @@ stepCounterMinus.totalSteps = 60
 // Reduce 140 steps
 ```
 
+## Project Guide
+### 1. Introduction
+
+It's time to build our first Swift's program, a gallery showcasing students' projects and papers. This idea originates from the UX project called [Project Gallery](https://www.behance.net/gallery/120240899/Project-Gallery/modules/684326629) from CS303 Human-Computer Interaction at Fulbright University Vietnam. However, we will not build the mobile app version of that interface. In fact, this app will have a different user interface. Therefore, it will be renamed *Showcase* to respect the authors.
+
+Some functions of *Showcase*:
+
+- Display projects and papers (articles, for short) in a playful way
+- Recommend suited articles based on the user's reading history
+- Save articles for later read
+- Search articles by name and field
+- Switch color mode (light and dark)
+- Create and modify user's profile
+- Message the author directly
+- Flag inappropriate contents
+- and, if we have time, allow the user to post and modify their articles
+
+That is all for the first version of our first app built with Swift. It sounds like a mix of a blog and a newspaper app, ha. In that case, I have done some google searches and found a [Subscription Blogging App tutorial](https://github.com/AfrazCodes/Subscription-Blogging-App) from AfrazCodes. I believe that it will be easier for us to get started with that tutorial, then modify it to make our app satisfy all the above functions.
+
+Our app also must communicate with a database, so we will use a small, fast, and free SQL database engine called [SQLite](https://www.sqlite.org). This database holds all users' profiles along with associated articles, reading history, and direct messages. 
+
+Additionally, we will use SwiftUI, an Apple's declarative UI framework from Apple that enables developers to build native user interfaces for IOS apps. Since SwiftUI is a built-in framework, we must import it first. The importing syntax is: `import SwiftUI`.
+
+That's all. Below are a preview of what our app will look like.
+
+![alt text](../../../tree/main/images/app_preview.png "Showcase app preview")
+
+
 ## Demo Code
 
 Above example codes are avaialable in the folder [*Code*](../../../tree/main/code). 
