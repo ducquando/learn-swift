@@ -1774,7 +1774,7 @@ Additionally, we will use SwiftUI, an Apple's declarative UI framework from Appl
 
 That's all. Below are a preview of what our app will look like.
 
-![alt text](../../../tree/main/images/app_preview.png "Showcase app preview")
+![alt text](https://github.com/ducquando/learn-swift/blob/main/images/app_preview.png "Showcase app preview")
 
 
 ## Demo Code
