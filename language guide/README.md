@@ -1,4 +1,4 @@
-# Language Guide
+# language guide
 
 This guide covers the following information on Swift:
 

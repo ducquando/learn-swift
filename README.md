@@ -36,50 +36,49 @@ Once you have done all steps, you are ready to begin.
 
 This guide covers the following information on Swift:
 
-1. [The Basics](/language-guide/1-the-basics.md)   
-2. [Constants and Variables](/language-guide/2-constants-and-variables.md)   
-3. [Basic Operators](/language-guide/3-basic-operators.md)   
-4. [Short-circuit Evaluation](/language-guide/4-short-circuit-evaluation.md)   
-5. [Selection Statements](/language-guide/5-selection-statements.md)   
-6. [Iteration Statements](/language-guide/6-iteration-statements.md)   
-7. [Control Transfer Statements](/language-guide/7-control-transfer-statements.md)   
-8. [Functions](/language-guide/8-functions.md)   
-9. [Recursion](/language-guide/9-recursion.md)   
-10. [Instances](/language-guide/10-instances.md)   
+1. [The Basics](../../language%20guide/1-the-basics.md)   
+2. [Constants and Variables](../../language%20guide/2-constants-and-variables.md)   
+3. [Basic Operators](../../language%20guide/3-basic-operators.md)   
+4. [Short-circuit Evaluation](../../language%20guide/4-short-circuit-evaluation.md)   
+5. [Selection Statements](../../language%20guide/5-selection-statements.md)   
+6. [Iteration Statements](../../language%20guide/6-iteration-statements.md)   
+7. [Control Transfer Statements](../../language%20guide/7-control-transfer-statements.md)   
+8. [Functions](../../language%20guide/8-functions.md)   
+9. [Recursion](../../language%20guide/9-recursion.md)   
+10. [Instances](../../language%20guide/10-instances.md)   
+
+If the hyperlinks do not work for you, the contents are located in folder [language guide](../../../tree/main/language%20guide).
 
 ## Demo Code
 
-Above example codes are avaialable in the folder [*Code*](../../../tree/main/code). 
+Above example codes are avaialable in the folder [*code*](../../../tree/main/code). 
 
 In the case of code preview on GitHub, each `.playground` folder will have multiple `.xcplaygroundpage` sub-folders associated with different language guide sections. Open a sub-folder, and find a `Content.swift` file. Open it to preview the example codes. However, I still prefer you to clone this repository and run the `.playground` file with a compiler such as Xcode.
 
-## Project Guide
+## Programming project
 
-It's time to build our first Swift's program, a gallery showcasing students' projects and papers. This idea originates from the UX project called [Project Gallery](https://www.behance.net/gallery/120240899/Project-Gallery/modules/684326629) from CS303 Human-Computer Interaction at Fulbright University Vietnam. However, we will not build the mobile app version of that interface. In fact, this app will have a different user interface. Therefore, it will be renamed *Showcase* to respect the authors.
+> This project is available at the [showcase](https://github.com/ducquando/showcase) repository. 
+
+It's time to build our first Swift's program, an application for students to browse and read research articles. This idea originates from the UX project called [Project Gallery](https://www.behance.net/gallery/120240899/Project-Gallery/modules/684326629) from CS303 Human-Computer Interaction at Fulbright University Vietnam. However, we will not build the mobile app version of that interface. In fact, this app will have a different user interface. Therefore, it will be renamed *Showcase* to respect the authors.
 
 Some basic features of *Showcase*:
-- Article showcasing on an user-centric GUI
-- Article recommendation based on the agorithm comparing users' histories
-- Article saving and flagging
+- Article showcasing on a user-centric GUI
+- Article recommendation based on the users' histories comparison algorithm
+- Article interaction such as saved and flagged
 
 Additionally, *Showcase* is a native-iOS app that supports:
 - Color mode (light and dark) switching
 
 On top of that, *Showcase* should also stores and fetchs data from the database, which adds these functions to the program:
-- New article updation
+- New article's updation
 - Article searching by titles
 - User's sign-in
 
-That is all for the first version of our first app built with Swift.
-
-Since our app will communicate with a database, we decide to use the small, fast, and free SQL database engine called [SQLite](https://www.sqlite.org). This database holds all users' profiles along with associated articles, reading history, and direct messages. For the ease of wrapping SQLite query, we will use the framework developed by Stephen Celis called [SQLite.swift](https://github.com/stephencelis/SQLite.swift). We will clone their repository dicrectly to perform querying syntax.
-
-Additionally, we will use SwiftUI, an Apple's declarative UI framework from Apple that enables developers to build native user interfaces for IOS apps. Since SwiftUI is a built-in framework, we must import it first. The importing syntax is: `import SwiftUI`.
-
-That's all. Below is a peak of what will our app look like *(designed using Figma)*. If you are interested in this app, check [this repository on the app's code]().
+That is all for the first version of our first app built with Swift. Below is a peak of what will our app look like *(designed using Figma)*. If you are interested in this app, check [this repo for the app's code](https://github.com/ducquando/showcase) and [this repo for the app's dataset](https://github.com/ducquando/showcase-dataset).
 
 ![alt text](https://github.com/ducquando/learn-swift/blob/main/images/app_preview.png "Showcase app preview")
 
+> For a closer look, let's watch this Youtube video: [Showcase App Preview](https://youtu.be/XA_s9ia5n2s).
 
 ## References
 Comi, M. (2016, April 20). *Struct-style printing of classes in Swift.* Medium. Retrieved April 18, 2022, from https://medium.com/swift-programming/struct-style-printing-of-classes-in-swift-7ee34f1c975a 
