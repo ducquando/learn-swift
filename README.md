@@ -36,16 +36,16 @@ Once you have done all steps, you are ready to begin.
 
 This guide covers the following information on Swift:
 
-1. [The Basics](../../language%20guide/1-the-basics.md)   
-2. [Constants and Variables](../../language%20guide/2-constants-and-variables.md)   
-3. [Basic Operators](../../language%20guide/3-basic-operators.md)   
-4. [Short-circuit Evaluation](../../language%20guide/4-short-circuit-evaluation.md)   
-5. [Selection Statements](../../language%20guide/5-selection-statements.md)   
-6. [Iteration Statements](../../language%20guide/6-iteration-statements.md)   
-7. [Control Transfer Statements](../../language%20guide/7-control-transfer-statements.md)   
-8. [Functions](../../language%20guide/8-functions.md)   
-9. [Recursion](../../language%20guide/9-recursion.md)   
-10. [Instances](../../language%20guide/10-instances.md)   
+1. [The Basics](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/1-the-basics.md)   
+2. [Constants and Variables](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/2-constants-and-variables.md)   
+3. [Basic Operators](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/3-basic-operators.md)   
+4. [Short-circuit Evaluation](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/4-short-circuit-evaluation.md)   
+5. [Selection Statements](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/5-selection-statements.md)   
+6. [Iteration Statements](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/6-iteration-statements.md)   
+7. [Control Transfer Statements](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/7-control-transfer-statements.md)   
+8. [Functions](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/8-functions.md)   
+9. [Recursions](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/9-recursions.md)   
+10. [Instances](https://github.com/ducquando/learn-swift/blob/8d766168359bf68dabbfd48828a3b04f9311d968/language%20guide/10-instances.md)   
 
 If the hyperlinks do not work for you, the contents are located in folder [language guide](../../../tree/main/language%20guide).
 
